@@ -1,0 +1,2042 @@
+# ============================================================
+# MASTER PORTFOLIO CONTEXT
+# SOURCE PRINCIPLE
+# ============================================================
+
+source_hierarchy:
+
+  primary:
+    - "Current LinkedIn profile"
+    - "Previously provided project, research, technical, and professional information"
+
+  secondary:
+    - "Current English CV"
+
+  integration_rule: >
+    Information from LinkedIn and previously established project context
+    must NOT be removed merely because it is absent from the CV.
+    The CV is an additional source used to enrich existing information
+    with quantitative results, responsibilities, dates, technologies,
+    project descriptions, and certifications.
+
+  conflict_rule: >
+    If two sources contain different versions of the same information,
+    prioritize the most recent and explicitly confirmed information
+    provided by Farel. Do not silently remove either version.
+    Preserve the latest confirmed version as the website-facing content.
+
+  completeness_rule: >
+    The portfolio should represent the complete professional and technical
+    profile rather than reproducing only the CV.
+
+
+# ============================================================
+# 01. PERSONAL IDENTITY
+# ============================================================
+
+personal:
+
+  full_name:
+    "Farel Rakha Dzakwan"
+
+  professional_title:
+    primary:
+      "AI Engineer & AI Researcher"
+
+    alternatives:
+      - "Artificial Intelligence Engineer"
+      - "AI Engineer | Machine Learning Researcher"
+      - "Artificial Intelligence Engineer | Machine Learning | Computer Vision"
+
+  location:
+    city: "Malang"
+    province: "East Java"
+    country: "Indonesia"
+
+  education:
+    institution:
+      "Universitas Brawijaya"
+
+    program:
+      "Informatics Engineering"
+
+    period:
+      "2022–2026"
+
+    gpa:
+      "3.73 / 4.00"
+
+  contact:
+    email:
+      "professionalfarelrakhad@gmail.com"
+
+    phone:
+      "+6282143066677"
+
+    linkedin:
+      "https://www.linkedin.com/in/farel-rakha-dzakwan/"
+
+  professional_summary:
+    >
+      AI and Machine Learning practitioner with experience spanning applied
+      AI research, machine learning experimentation, computer vision,
+      signal processing, data analysis, data management, and intelligent
+      application development.
+
+
+# ============================================================
+# 02. PROFESSIONAL POSITIONING
+# ============================================================
+
+positioning:
+
+  primary_identity:
+    "AI Engineer & AI Researcher"
+
+  core_statement:
+    >
+      Building intelligent systems through machine learning, deep learning,
+      computer vision, signal processing, and applied AI research.
+
+  supporting_statement:
+    >
+      Combining research methodology, quantitative experimentation,
+      machine learning engineering, and practical system development to
+      solve real-world problems.
+
+  professional_profile:
+    >
+      Informatics Engineering graduate with practical experience in AI
+      research, machine learning, computer vision, EEG signal analysis,
+      NLP, data analysis, and intelligent systems.
+
+  professional_strengths:
+    - Artificial Intelligence
+    - Machine Learning
+    - Deep Learning
+    - Computer Vision
+    - Data Science
+    - Data Analysis
+    - Data Management
+    - Natural Language Processing
+    - EEG Signal Processing
+    - Probabilistic Modeling
+    - Generative AI
+    - AI Application Development
+
+  differentiators:
+    - Research experience
+    - Quantitative model evaluation
+    - Computer vision implementation
+    - Signal-processing experience
+    - AI product development
+    - Industrial AI applications
+    - Laboratory leadership
+    - Technical documentation
+    - Cross-functional coordination
+
+
+# ============================================================
+# 03. ABOUT
+# ============================================================
+
+about:
+
+  core_narrative:
+    >
+      Farel Rakha Dzakwan is an Artificial Intelligence Engineer and
+      AI Researcher with a background in Informatics Engineering at
+      Universitas Brawijaya.
+
+      His experience spans applied AI research, machine learning,
+      deep learning, computer vision, EEG signal processing, NLP,
+      data analysis, optimization, and intelligent application development.
+
+      His projects range from probabilistic EEG representation learning
+      and physiological signal analysis to real-time crowd counting,
+      industrial fatigue detection, semantic job recommendation,
+      and optimization systems.
+
+      His approach combines technical experimentation with practical
+      implementation, emphasizing measurable performance, reproducible
+      analysis, and applicability to real-world problems.
+
+  research_to_engineering_pipeline:
+
+    - Problem Definition
+    - Dataset Preparation
+    - Data Processing
+    - Exploratory Analysis
+    - Feature Engineering
+    - Model Development
+    - Experimentation
+    - Evaluation
+    - Interpretation
+    - Application / Deployment
+
+
+# ============================================================
+# 04. AREAS OF EXPERTISE
+# ============================================================
+
+expertise:
+
+  artificial_intelligence:
+    - Artificial Intelligence
+    - Machine Learning
+    - Deep Learning
+    - Generative AI
+    - Intelligent Systems
+
+  machine_learning:
+    - Supervised Learning
+    - Unsupervised Learning
+    - Semi-Supervised Learning
+    - Classification
+    - Clustering
+    - Predictive Modeling
+    - Statistical Modeling
+    - Model Evaluation
+
+  computer_vision:
+    - Object Detection
+    - Crowd Counting
+    - YOLO
+    - YOLOv8
+    - OpenCV
+    - Facial Landmark Analysis
+    - Drowsiness Detection
+    - Video Analytics
+
+  signal_processing:
+    - EEG Signal Processing
+    - Frequency-Domain Analysis
+    - Welch PSD
+    - Bandpower
+    - Temporal Modeling
+    - GMM-HMM
+
+  natural_language_processing:
+    - Natural Language Processing
+    - Text Mining
+    - Sentiment Analysis
+    - Text Classification
+    - Semantic Matching
+    - Embedding-based Similarity
+
+  generative_ai:
+    - Generative AI
+    - Large Language Models
+    - Retrieval-Augmented Generation
+    - AI Agents
+    - Prompt Engineering
+    - Responsible AI
+
+  data:
+    - Data Analysis
+    - Data Processing
+    - Data Management
+    - Feature Engineering
+    - Data Visualization
+    - Statistical Analysis
+
+  optimization:
+    - Evolutionary Algorithms
+    - Swarm Intelligence
+    - Metaheuristic Optimization
+    - Linear Programming
+
+
+# ============================================================
+# 05. FEATURED PROJECTS
+# ============================================================
+
+featured_projects:
+
+
+  # ----------------------------------------------------------
+  # 01 — UNDERGRADUATE THESIS
+  # ----------------------------------------------------------
+
+  - title:
+      "Latent EEG Representation Learning Using GMM-HMM for Stress Pattern Analysis"
+
+    category:
+      - AI Research
+      - Machine Learning
+      - EEG Signal Processing
+      - Probabilistic Modeling
+
+    type:
+      "Undergraduate Thesis"
+
+    period:
+      "August 2025 – July 2026"
+
+    role:
+      "AI Researcher"
+
+    objective:
+      >
+      Analyze the latent structure and temporal dynamics of EEG signals
+      using GMM-HMM to study probabilistic representations of patterns
+      associated with stress-inducing activities.
+
+    dataset:
+      type:
+        "Secondary EEG Dataset"
+
+      participants:
+        50
+
+      device:
+        "Muse Headband 2"
+
+      channels:
+        - TP9
+        - AF7
+        - AF8
+        - TP10
+
+      activities:
+        - pre_activity
+        - pauli_test
+        - translate_test
+        - questionnaire_test
+        - post_activity
+
+    sampling_configurations:
+      - "20 Hz"
+      - "40 Hz"
+
+    preprocessing:
+      - Resampling
+      - Filtering
+      - Windowing
+      - 2-second windows
+      - 50% overlap
+
+    feature_extraction:
+      method:
+        "Welch Power Spectral Density"
+
+      frequency_bands:
+        - Delta
+        - Theta
+        - Alpha
+        - Beta
+
+      beta_rule:
+        >
+        Beta band was included in the 40 Hz experimental configuration.
+
+      feature_structure:
+        >
+        Multi-channel bandpower features generated from EEG channels
+        and frequency bands.
+
+      feature_vector:
+        "Sequential Feature Matrix"
+
+    normalization:
+      - Z-score normalization
+
+    modeling:
+      model:
+        "Gaussian Mixture Model Hidden Markov Model (GMM-HMM)"
+
+      model_selection:
+        "Bayesian Information Criterion (BIC)"
+
+      best_configuration:
+        hidden_states: 5
+        gaussian_mixture_components: 4
+
+    latent_states:
+      notation:
+        - S0
+        - S1
+        - S2
+        - S3
+        - S4
+
+      interpretation_rule:
+        >
+        S0–S4 are internal probabilistic latent states and must not be
+        presented as directly corresponding to physiological states.
+
+    pseudo_labeling:
+      method:
+        "K-Means"
+
+      number_of_clusters:
+        3
+
+      representation:
+        - Hidden-state proportions
+        - Average log-likelihood per sample
+
+      interpretation:
+        - Low
+        - Medium
+        - High
+
+      scientific_note:
+        >
+        Pseudo-label groups represent probabilistic representation
+        characteristics and must not be presented as direct physiological
+        stress levels.
+
+    model_results:
+
+      20Hz:
+        hidden_states: 5
+        mixture_components: 4
+        bic:
+          "-13,064,842.05"
+        silhouette_score:
+          "0.3601"
+
+      40Hz:
+        hidden_states: 5
+        mixture_components: 4
+        bic:
+          "-20,171,790.88"
+
+    primary_result:
+      >
+      The 40 Hz configuration produced the lowest BIC, approximately
+      -20.17 million, indicating the strongest model-selection criterion
+      among the evaluated configurations.
+
+    additional_result:
+      >
+      The 20 Hz configuration produced a higher silhouette score of
+      0.3601 than the 40 Hz configuration.
+
+    validation:
+      models:
+        - Random Forest
+        - SVM
+        - XGBoost
+
+    technologies:
+      - Python
+      - NumPy
+      - SciPy
+      - Scikit-learn
+      - GMM-HMM
+      - K-Means
+
+    featured:
+      true
+
+
+  # ----------------------------------------------------------
+  # 02 — JATIM PARK
+  # ----------------------------------------------------------
+
+  - title:
+      "Real-Time Crowd Counting System Using YOLOv8 for Jatim Park Visitor Monitoring"
+
+    category:
+      - Computer Vision
+      - Object Detection
+      - Crowd Analytics
+      - Real-Time AI
+
+    type:
+      "Research Project"
+
+    period:
+      "August 2025 – June 2026"
+
+    role:
+      "Computer Vision / AI Researcher"
+
+    objective:
+      >
+      Develop a real-time crowd detection and counting system for
+      estimating visitor density from surveillance video streams.
+
+    methodology:
+      - YOLOv8
+      - Person Detection
+      - Object Detection
+      - Centroid-based Tracking
+      - Line Crossing
+      - Occupancy Estimation
+      - Crowd Counting
+      - Video Analytics
+
+    pipeline:
+      - Video Input
+      - YOLOv8 Detection
+      - Person Detection
+      - Tracking
+      - Counting
+      - Occupancy Estimation
+      - Crowd Analytics
+
+    application:
+      - Visitor monitoring
+      - Operational monitoring
+      - Safety management
+      - Decision support
+
+    technologies:
+      - Python
+      - YOLOv8
+      - OpenCV
+      - Computer Vision
+
+    featured:
+      true
+
+
+  # ----------------------------------------------------------
+  # 03 — PLTU PAITON
+  # ----------------------------------------------------------
+
+  - title:
+      "Operator Fatigue Detection System Using Computer Vision for PLTU Paiton"
+
+    category:
+      - Computer Vision
+      - Deep Learning
+      - Occupational Safety
+      - Industrial AI
+
+    type:
+      "Research Project"
+
+    role:
+      "Computer Vision / AI Researcher"
+
+    objective:
+      >
+      Develop an automated computer vision system to identify visual
+      indicators of operator fatigue and drowsiness in industrial
+      environments.
+
+    methodology:
+      - Facial Landmark Analysis
+      - Eye Closure Detection
+      - Drowsiness Detection
+      - Deep Learning
+      - Computer Vision
+
+    system:
+      >
+      Automated monitoring framework for industrial environments intended
+      to support occupational safety and reduce fatigue-related operational
+      risks.
+
+    application:
+      - Operator monitoring
+      - Occupational safety
+      - Industrial monitoring
+      - Fatigue risk reduction
+
+    featured:
+      true
+
+
+  # ----------------------------------------------------------
+  # 04 — SCAN CV
+  # ----------------------------------------------------------
+
+  - title:
+      "ScanCV: A Web-Based Job Recommendation System"
+
+    category:
+      - Natural Language Processing
+      - Machine Learning
+      - Semantic Matching
+      - AI Application
+
+    type:
+      "Capstone Project"
+
+    period:
+      "February 2025 – June 2025"
+
+    role:
+      "Machine Learning Engineer"
+
+    objective:
+      >
+      Develop a web-based job recommendation platform that matches
+      job seekers with relevant positions based on CV information,
+      skills, and preferences.
+
+    methodology:
+      - CV Processing
+      - Embedding Generation
+      - Semantic Representation
+      - Embedding Similarity
+      - Custom Filtering
+      - Job Recommendation
+
+    embedding:
+      "BAAI General Embedding"
+
+    results:
+      recommendation_accuracy:
+        "84%"
+
+      users:
+        "70+"
+
+    technology:
+      - Python
+      - NLP
+      - BAAI General Embedding
+      - FastAPI
+      - Docker
+      - Railway
+
+    system_architecture:
+      - CV Input
+      - CV Processing
+      - Embedding Generation
+      - Job Embedding
+      - Similarity Calculation
+      - Filtering
+      - Recommendation
+
+    featured:
+      true
+
+
+  # ----------------------------------------------------------
+  # 05 — EEG PSEUDO LABELING RESEARCH
+  # ----------------------------------------------------------
+
+  - title:
+      "Pseudo-Labeling of Prefrontal Cortex EEG Signals"
+
+    category:
+      - AI Research
+      - EEG Signal Processing
+      - Semi-Supervised Learning
+      - Machine Learning
+
+    type:
+      "Research Internship"
+
+    period:
+      "February 2025 – June 2025"
+
+    role:
+      "Researcher"
+
+    methodology:
+      - K-Means
+      - Gaussian Mixture Model
+      - SVM
+      - Decision Tree
+      - KNN
+
+    features:
+      count:
+        9
+      domain:
+        "Frequency-domain features"
+
+    results:
+      kmeans_svm:
+        "97.18%"
+
+      gmm:
+        "95.33%"
+
+    significance:
+      >
+      Demonstrated a clustering-to-classification pipeline for
+      pseudo-labeling EEG signal representations.
+
+    featured:
+      true
+
+
+  # ----------------------------------------------------------
+  # 06 — MULTIMODAL STRESS
+  # ----------------------------------------------------------
+
+  - title:
+      "Hybrid Multimodal Stress Detection from Physiological Signals Using Early Feature and Late Decision Fusion"
+
+    category:
+      - Machine Learning
+      - Multimodal Learning
+      - Physiological Signal Processing
+
+    type:
+      "Big Data Analytics Course Final Project"
+
+    period:
+      "February 2025 – June 2025"
+
+    methodology:
+      - Early Feature Fusion
+      - Late Decision Fusion
+      - GroupKFold
+      - Weighted Voting
+
+    result:
+      accuracy:
+        "96.77%"
+
+    validation:
+      "GroupKFold"
+
+    strengths:
+      - Stable precision
+      - Stable recall
+      - Stable F1
+      - Cross-user generalization
+
+    featured:
+      false
+
+
+  # ----------------------------------------------------------
+  # 07 — METAHEURISTIC OPTIMIZATION
+  # ----------------------------------------------------------
+
+  - title:
+      "Metaheuristic Optimization for Balanced Supply–Demand Allocation"
+
+    category:
+      - Optimization
+      - Evolutionary Algorithms
+      - Swarm Intelligence
+      - Operations Research
+
+    type:
+      "Course Final Project"
+
+    period:
+      "February 2025 – June 2025"
+
+    algorithms:
+      - Firefly Algorithm
+      - Ant Colony Optimization
+      - Grey Wolf Optimization
+      - Linear Programming
+
+    scenarios:
+      - "10×10"
+      - "50×50"
+
+    repetitions:
+      "10 runs per scenario"
+
+    statistical_validation:
+      - ANOVA
+      - t-test
+
+    result:
+      >
+      Firefly Algorithm was identified as the top-ranked method for
+      medium-scale cases.
+
+    featured:
+      false
+
+
+  # ----------------------------------------------------------
+  # 08 — TOXIC COMMENTS
+  # ----------------------------------------------------------
+
+  - title:
+      "Comparative Evaluation of CNN Algorithm Performance and RNN for Toxic Comments Classification"
+
+    category:
+      - Deep Learning
+      - NLP
+      - Text Classification
+
+    type:
+      "Deep Learning Course Final Project"
+
+    period:
+      "August 2024 – December 2024"
+
+    models:
+      - CNN
+      - LSTM-based RNN
+
+    results:
+      cnn_roc_auc:
+        "0.9671"
+
+      rnn_roc_auc:
+        "0.9578"
+
+    conclusion:
+      >
+      CNN performed better on local text patterns, while RNN provided
+      sequential-context modeling.
+
+    featured:
+      false
+
+
+  # ----------------------------------------------------------
+  # 09 — FINANCIAL NEWS
+  # ----------------------------------------------------------
+
+  - title:
+      "Sentiment Analysis of Financial News using SVM Machine Learning Algorithm"
+
+    category:
+      - NLP
+      - Sentiment Analysis
+      - Machine Learning
+
+    type:
+      "NLP Course Final Project"
+
+    period:
+      "August 2024 – December 2024"
+
+    model:
+      "SVM"
+
+    result:
+      maximum_accuracy:
+        "73.63%"
+
+      neutral_class_improvement:
+        "~20% precision/recall improvement"
+
+    analysis:
+      - Dataset imbalance
+      - Multiple preprocessing scenarios
+
+    featured:
+      false
+
+
+  # ----------------------------------------------------------
+  # 10 — LOAN APPROVAL
+  # ----------------------------------------------------------
+
+  - title:
+      "Loan Approval Classification Using Artificial Neural Networks"
+
+    category:
+      - Artificial Neural Networks
+      - Classification
+      - Machine Learning
+
+    type:
+      "Artificial Neural Network Course Final Project"
+
+    period:
+      "August 2024 – December 2024"
+
+    dataset:
+      source:
+        "Kaggle"
+
+      rows:
+        45000
+
+      features:
+        14
+
+    methodology:
+      - Backpropagation
+      - Artificial Neural Network
+
+    benchmark_metrics:
+      accuracy:
+        "94.37%"
+
+      f1:
+        "84.62%"
+
+    featured:
+      false
+
+
+  # ----------------------------------------------------------
+  # 11 — BRAWIJAYA JOURNAL
+  # ----------------------------------------------------------
+
+  - title:
+      "Clustering Brawijaya University Journal Data Using Improved K-Means Algorithm"
+
+    category:
+      - Text Mining
+      - Clustering
+      - NLP
+      - Data Analysis
+
+    type:
+      "Text Mining Course Final Project"
+
+    period:
+      "August 2023 – December 2023"
+
+    dataset:
+      journal_abstracts:
+        7389
+
+    configuration:
+      terms:
+        250
+
+      clusters:
+        3
+
+    methods:
+      - Improved K-Means
+      - PCA
+      - Dendrogram
+
+    result:
+      silhouette_score:
+        "0.5078"
+
+    finding:
+      "Two dominant research themes"
+
+    featured:
+      false
+
+
+  # ----------------------------------------------------------
+  # 12 — INDUSTRIAL IOT / NEURO-FUZZY
+  # ----------------------------------------------------------
+
+  - title:
+      "IoT-Based Tobacco Dust Control System with Personal Safety Tags"
+
+    category:
+      - Industrial IoT
+      - Edge Computing
+      - Neuro-Fuzzy
+      - Occupational Safety
+
+    type:
+      "Research Plan / Competition Project"
+
+    event:
+      "IEEE FEST — IEEE Student Branch Universitas Brawijaya"
+
+    achievement:
+      - "1st Place — Research Plan"
+      - "Best Poster — Research Plan"
+
+    date: "September 2025"
+
+    objective:
+      >
+      Develop an IoT-based monitoring and warning system for occupational
+      exposure to tobacco dust in cigarette manufacturing environments.
+
+    architecture:
+      hardware:
+        - Sensors
+        - Personal Safety Tags
+        - Edge Devices
+
+      software:
+        - Firmware
+        - Data Pipeline
+        - Dashboard
+
+      algorithm:
+        - Neuro-Fuzzy Inference
+
+    application:
+      - Worker monitoring
+      - Exposure monitoring
+      - Real-time warning
+      - Occupational safety
+
+    featured:
+      true
+
+
+  # ----------------------------------------------------------
+  # 13 — DIGITAL SKILL FAIR
+  # ----------------------------------------------------------
+
+  - title:
+      "Digital Skill Fair 23.0"
+
+    category:
+      "Web Development"
+
+    event:
+      "dibimbing.id Digital Skill Fair 23.0"
+
+    date:
+      "23–26 January 2024"
+
+    role:
+      "Front-End Development"
+
+    display_priority:
+      "Additional Project"
+
+
+# ============================================================
+# 06. PROFESSIONAL EXPERIENCE
+# ============================================================
+
+experience:
+
+  - position:
+      "Coordinator Laboratory Assistant — Neural Network's Course"
+
+    organization:
+      "Universitas Brawijaya"
+
+    period:
+      "August 2025 – December 2025"
+
+    scope:
+      assistants:
+        14
+
+      classes:
+        7
+
+      practicians:
+        29
+
+    responsibilities:
+      - Coordinated laboratory assistants
+      - Standardized laboratory workflows
+      - Prepared practical materials
+      - Organized midterm practical examinations
+      - Organized final practical examinations
+      - Coordinated real-time issue resolution
+
+    results:
+      - "~30% improvement in readiness and on-time execution"
+      - "~25% reduction in troubleshooting"
+      - "Improved delivery consistency"
+
+
+  - position:
+      "Researcher — Laboratory Enhanced Learning's Internship"
+
+    organization:
+      "Universitas Brawijaya"
+
+    period:
+      "February 2025 – June 2025"
+
+    research:
+      >
+      Pseudo-labeling of prefrontal cortex EEG signals using K-Means
+      and Gaussian Mixture Models.
+
+    methods:
+      - K-Means
+      - GMM
+      - SVM
+      - Decision Tree
+      - KNN
+
+    results:
+      - "97.18% with K-Means + SVM"
+      - "95.33% with GMM"
+
+    competencies:
+      - EEG Signal Processing
+      - Semi-Supervised Learning
+      - Machine Learning
+      - Statistical Modeling
+      - Predictive Modeling
+
+
+  - position:
+      "Laboratory Assistant — Advanced Artificial Intelligence Course"
+
+    organization:
+      "Universitas Brawijaya"
+
+    period:
+      "February 2025 – June 2025"
+
+    scope:
+      practicians:
+        39
+
+    responsibilities:
+      - Prepared datasets
+      - Developed Python demonstrations
+      - Maintained reproducible notebooks
+      - Supported practical sessions
+      - Evaluated assignments
+      - Benchmarked baseline ML models
+
+    result:
+      "~30% reduction in troubleshooting time"
+
+
+  - position:
+      "Module Maker"
+
+    organization:
+      "Badan Kepegawaian dan Pengembangan Sumber Daya Manusia Kabupaten Malang"
+
+    period:
+      "May 2024 – October 2024"
+
+    responsibilities:
+      - Developed 10+ application modules
+      - Documented modules into structured user guides
+      - Delivered training sessions
+      - Conducted application simulations
+
+    results:
+      - "~30% reduction in user inquiries"
+      - "20+ government employees trained"
+      - "95% completion rate"
+
+
+  - position:
+      "Organizer — Statistika Ria dan Festival Sains Data"
+
+    period:
+      "August 2023"
+
+    scope:
+      participants:
+        "100+"
+
+    responsibilities:
+      - Workshop logistics
+      - Competition logistics
+      - Communication
+      - Material distribution
+      - Run-of-show planning
+
+    result:
+      speaker_satisfaction:
+        "90%"
+
+
+  - position:
+      "Organizer — Asosiasi Pendidikan Tinggi Informatika dan Komputer"
+
+    period:
+      "August 2023"
+
+    scope:
+      participants:
+        "200+"
+
+      speakers:
+        5
+
+    responsibilities:
+      - Registration management
+      - Technical preparation
+      - Event execution
+
+
+# ============================================================
+# 07. LEADERSHIP & ORGANIZATION
+# ============================================================
+
+leadership:
+
+  - role:
+      "Coordinator Laboratory Assistant"
+
+    organization:
+      "Neural Network's Course — Universitas Brawijaya"
+
+    period:
+      "August 2025 – December 2025"
+
+    leadership_scope:
+      - 14 assistants
+      - 7 classes
+      - 29 practicians
+
+
+  - role:
+      "Advocacy and Student Prosperity"
+
+    organization:
+      "EMIF — Informatics Student Executive Board"
+
+    period:
+      "October 2022 – February 2023"
+
+    responsibilities:
+      - Researched academic opportunities
+      - Researched scholarship information
+      - Distributed opportunities
+      - Provided student advocacy
+      - Supported academic communication
+
+    channels:
+      - WhatsApp
+      - Instagram
+      - LINE OA
+
+    results:
+      opportunities_shared:
+        "20+"
+
+      students_supported:
+        "10+"
+
+
+# ============================================================
+# 08. VOLUNTEERING / COMMUNITY
+# ============================================================
+
+community:
+
+  - role:
+      "Liaison Officer"
+
+    event:
+      "Statistika Ria dan Festival Sains Data 2023"
+
+    period:
+      "August 2023"
+
+    focus:
+      - Communication
+      - Coordination
+      - Statistics
+      - Data Science
+
+
+  - role:
+      "Liaison Officer"
+
+    event:
+      "Sekolah GEMASTIK Universitas Brawijaya 2023"
+
+    period:
+      "June 2023"
+
+    focus:
+      - Data Mining
+      - Competition Coordination
+      - Student-Supervisor Communication
+
+
+  - role:
+      "Student Mentor"
+
+    event:
+      "INTRIVIA 2023"
+
+    period:
+      "July – October 2023"
+
+    focus:
+      - Student Mentoring
+      - Academic Adaptation
+      - Student Development
+
+
+  - role:
+      "Secretary"
+
+    event:
+      "Mahasiswa Membangun Desa 2024"
+
+    period:
+      "July – August 2024"
+
+    contributions:
+      - Taught basic computer skills to 30 elementary students
+      - Taught Canva for presentations
+      - Assisted local SMEs with digitalization
+      - Assisted local SMEs with branding
+      - Supported health checks
+      - Supported blood donation activities
+      - Produced village profile video
+
+    achievement:
+      "1st Place at district level for village profile video"
+
+
+# ============================================================
+# 09. TECHNICAL SKILLS
+# ============================================================
+
+skills:
+
+  programming:
+    - Python
+
+  machine_learning:
+    - Scikit-learn
+    - Machine Learning
+    - Supervised Learning
+    - Unsupervised Learning
+    - Semi-Supervised Learning
+    - Classification
+    - Clustering
+    - Predictive Modeling
+    - Evaluation Metrics
+
+  deep_learning:
+    - PyTorch
+    - Artificial Neural Networks
+    - CNN
+    - RNN
+    - LSTM
+
+  computer_vision:
+    - YOLO
+    - YOLOv8
+    - OpenCV
+    - Object Detection
+    - Crowd Counting
+    - Centroid-based Tracking
+    - Facial Landmark Analysis
+    - Drowsiness Detection
+
+  signal_processing:
+    - EEG Signal Processing
+    - Welch PSD
+    - Bandpower
+    - Frequency-domain Analysis
+    - GMM-HMM
+    - Temporal Modeling
+
+  natural_language_processing:
+    - Natural Language Processing
+    - Text Mining
+    - Sentiment Analysis
+    - Text Classification
+    - Semantic Matching
+    - Embedding Similarity
+
+  generative_ai:
+    - Generative AI
+    - Large Language Models
+    - RAG
+    - AI Agents
+    - Prompt Engineering
+    - Responsible AI
+
+  data:
+    - Data Processing
+    - Data Analysis
+    - Data Management
+    - Data Visualization
+    - Feature Engineering
+    - Spreadsheet
+
+  development:
+    - FastAPI
+    - Docker
+    - Git
+    - GitHub
+    - Google Colab
+    - Linux
+
+  cloud:
+    - Alibaba Cloud
+    - GPU-accelerated ECS
+    - Model Studio
+    - PAI
+
+
+# ============================================================
+# 10. CERTIFICATIONS
+# ============================================================
+
+certifications:
+
+  google:
+
+    name:
+      "Google Analytics"
+
+    issuer:
+      "Google"
+
+    date:
+      "August 2026"
+
+    expiry:
+      "August 2027"
+
+    credential_id:
+      "190907239"
+
+    type:
+      "Google Analytics Certification"
+
+    skills:
+      - Google Analytics
+
+  openai_academy:
+
+    - name: "OpenAI Academy: AI Foundations"
+      issuer: "OpenAI"
+      date: "August 2026"
+      credential_id: "3mk3mzygl5"
+      type: "Course Completion Certificate"
+      skills:
+        - AI Prompting
+        - AI Ethics
+
+    - name: "OpenAI Academy: Applied AI Foundations"
+      issuer: "OpenAI"
+      date: "August 2026"
+      credential_id: "sujozg5gtd"
+      type: "Course Completion Certificate"
+      skills:
+        - AI Prompting
+        - AI Ethics
+
+    - name: "OpenAI Academy: Agents and Workflows"
+      issuer: "OpenAI"
+      date: "August 2026"
+      credential_id: "jl2mbm4aos"
+      type: "Course Completion Certificate"
+      skills:
+        - AI Prompting
+        - AI Ethics
+
+  microsoft_office:
+
+    name:
+      "Microsoft Office Desktop Application"
+
+    issuer:
+      "Trust Training Partners"
+
+    date:
+      "March 2026"
+
+    credential_id:
+      "26UBC03128311"
+
+    type:
+      "Certificate of Achievement"
+
+    skills:
+      - Microsoft Excel
+      - Microsoft PowerPoint
+      - Microsoft Word
+
+  idea_ai:
+
+    name:
+      "Generative Artificial Intelligence"
+
+    issuer:
+      "Institute for Data Innovation and Artificial Intelligence (IDEA-AI)"
+
+    date:
+      "January 2026"
+
+    expiry:
+      "January 2029"
+
+    credential_id:
+      "1567-2847-3369-6234"
+
+    type:
+      "Certificate of Competence"
+
+    description:
+      "Generative Artificial Intelligence with qualification Fundamental Principles and Practical Applications"
+
+    skills:
+      - Generative Artificial Intelligence
+      - Generative AI
+
+  brawijaya_english:
+
+    name:
+      "Brawijaya English Proficiency Test"
+
+    issuer:
+      "University of Brawijaya — Brawijaya Language Center"
+
+    date:
+      "November 2025"
+
+    type:
+      "Certificate of Achievement"
+
+    skills:
+      - English
+
+  alibaba_cloud:
+
+    - "Alibaba Cloud Platform for AI"
+    - "Dive Into Generative AI"
+    - "Fundamentals of RAG and Agents"
+    - "Getting to Know Generative AI and its Concepts"
+    - "GPU-accelerated ECS"
+    - "The Inner Workings of Generative AI"
+    - "The Large World of Language Models"
+    - "Model Studio Fundamentals"
+    - "Prompt Engineering Fundamentals"
+    - "Using Generative AI Ethically & Responsibly"
+
+    date:
+      "October 2025"
+
+  additional_alibaba_cloud_program:
+
+    program:
+      "National AI Talent Development Program by Alibaba Cloud"
+
+    location:
+      "IndigoSpace Malang"
+
+    date:
+      "27 October 2025"
+
+    achievement:
+      "Selected among Top 10 participants in Malang"
+
+    focus:
+      - Generative AI
+      - Large Language Models
+      - RAG
+      - AI Agents
+      - Prompt Engineering
+      - AI Ethics
+      - Responsible AI
+      - GPU Computing
+      - Alibaba Cloud PAI
+      - Model Studio
+
+  dicoding:
+
+    - "Belajar Dasar Visualisasi Data"
+    - "Memulai Pemrograman dengan Python"
+
+    date:
+      "October 2024"
+
+
+
+# ============================================================
+# 10c. INTELLECTUAL PROPERTY (HAKI)
+# ============================================================
+
+intellectual_property:
+
+  - title:
+      "Rancang Bangun Aplikasi Peringatan Stres Kerja Berbasis Pola Penggunaan Perangkat Input"
+
+    type:
+      "Hak Kekayaan Intelektual (HAKI) — Surat Pencatatan Ciptaan"
+
+    issuer:
+      "Kementerian Hukum dan Hak Asasi Manusia Republik Indonesia"
+
+    date:
+      "June 2026"
+
+    credential_id:
+      "001276500"
+
+    skills:
+      - Software Development
+      - Machine Learning
+      - Computer Vision
+      - EEG Signal Processing
+      - Intelligent Systems
+
+
+# ============================================================
+# 11. AWARDS & ACHIEVEMENTS
+# ============================================================
+
+achievements:
+
+  major:
+    - "HAKI (Intellectual Property) — Rancang Bangun Aplikasi Peringatan Stres Kerja"
+    - "Top 10 Participant — National AI Talent Development Program"
+    - "1st Place — IEEE FEST Research Plan (September 2025)"
+    - "Best Poster — IEEE FEST Research Plan (September 2025)"
+
+  academic_metrics:
+    - "GPA 3.73 / 4.00"
+
+  research_metrics:
+    - "97.18% — K-Means + SVM EEG research"
+    - "95.33% — GMM EEG research"
+    - "96.77% — Multimodal physiological-signal project"
+    - "84% — ScanCV recommendation accuracy"
+    - "0.5078 — Improved K-Means silhouette score"
+    - "0.9671 — CNN ROC AUC for toxic comments"
+
+  operational_metrics:
+    - "~30% reduction in laboratory troubleshooting"
+    - "~25% reduction in coordinator troubleshooting"
+    - "~30% reduction in user inquiries"
+    - "95% government training completion"
+    - "90% speaker satisfaction"
+
+
+# ============================================================
+# 12. RESEARCH INTERESTS
+# ============================================================
+
+research_interests:
+
+  primary:
+    - Artificial Intelligence
+    - Machine Learning
+    - Deep Learning
+    - Computer Vision
+    - EEG Signal Processing
+    - Probabilistic Modeling
+
+  secondary:
+    - Natural Language Processing
+    - Data Mining
+    - Generative AI
+    - Large Language Models
+    - Retrieval-Augmented Generation
+    - AI Agents
+    - Multimodal Learning
+    - Optimization Algorithms
+    - Intelligent Systems
+
+
+# ============================================================
+# 13. RESEARCH PROFILE
+# ============================================================
+
+research_profile:
+
+  themes:
+    - Latent Representation Learning
+    - Probabilistic Machine Learning
+    - EEG Signal Analysis
+    - Computer Vision
+    - Industrial AI
+    - Crowd Analytics
+    - Multimodal Learning
+    - NLP
+    - Semantic Matching
+    - Metaheuristic Optimization
+
+  philosophy:
+    >
+    Develop AI systems that are analytically grounded, experimentally
+    validated, interpretable where possible, and applicable to practical
+    problems.
+
+  methodology:
+    - Problem Definition
+    - Data Preparation
+    - Exploratory Data Analysis
+    - Feature Engineering
+    - Model Development
+    - Hyperparameter Evaluation
+    - Model Selection
+    - Validation
+    - Interpretation
+    - Application
+
+
+# ============================================================
+# 14. PROFESSIONAL VALUE PROPOSITION
+# ============================================================
+
+value_proposition:
+
+  research:
+    >
+    Experience designing and evaluating AI research pipelines involving
+    EEG signals, probabilistic models, pseudo-labeling, and multimodal
+    physiological data.
+
+  engineering:
+    >
+    Experience implementing practical AI systems involving YOLOv8,
+    computer vision, NLP, semantic embeddings, and automated monitoring.
+
+  analytical:
+    >
+    Comfortable with data processing, feature engineering, statistical
+    evaluation, model benchmarking, and quantitative comparison.
+
+  leadership:
+    >
+    Demonstrated ability to coordinate laboratory teams, standardize
+    workflows, communicate with stakeholders, and support technical
+    execution.
+
+  communication:
+    >
+    Experience translating technical systems into documentation,
+    training materials, practical demonstrations, and user-facing guides.
+
+
+# ============================================================
+# 15. HOMEPAGE
+# ============================================================
+
+homepage:
+
+  hero:
+
+    name:
+      "Farel Rakha Dzakwan"
+
+    title:
+      "AI Engineer & AI Researcher"
+
+    tagline:
+      >
+      Building intelligent systems through machine learning, computer
+      vision, signal processing, and applied AI research.
+
+    secondary_tagline:
+      >
+      Research-driven. Data-informed. Built for real-world applications.
+
+    primary_cta:
+      "View Projects"
+
+    secondary_cta:
+      "Download CV"
+
+    tertiary_cta:
+      "Let's Connect"
+
+
+  credibility_metrics:
+
+    - value: "3.73 / 4.00"
+      label: "GPA"
+
+    - value: "6+"
+      label: "AI & Research Projects"
+
+    - value: "15+"
+      label: "Certifications Earned"
+
+    - value: "1"
+      label: "Registered HAKI"
+
+    - value: "1st Place"
+      label: "IEEE FEST"
+
+
+  selected_projects:
+
+    - "GMM-HMM EEG Research"
+    - "YOLOv8 Crowd Counting"
+    - "PLTU Paiton Fatigue Detection"
+    - "ScanCV"
+
+
+# ============================================================
+# 16. WEBSITE STRUCTURE
+# ============================================================
+
+website_structure:
+
+  primary_navigation:
+
+    - Home
+    - About
+    - Projects
+    - Experience
+    - Research
+    - Skills
+    - Achievements
+    - Contact
+
+  homepage_sections:
+
+    - Hero
+    - Selected Projects
+    - About
+    - Research / Expertise
+    - Experience
+    - Technical Skills
+    - Achievements
+    - Certifications
+    - Education
+    - Contact
+
+  project_pages:
+    >
+    Each featured project should have a dedicated case-study page.
+
+
+# ============================================================
+# 17. PROJECT PAGE STRUCTURE
+# ============================================================
+
+project_page:
+
+  sections:
+
+    - Project Overview
+    - Problem
+    - Objective
+    - Role
+    - Dataset / Input
+    - Methodology
+    - Technical Architecture
+    - Implementation
+    - Evaluation
+    - Results
+    - Key Insights
+    - Challenges
+    - Outcome
+    - Technologies
+    - Repository
+    - Documentation
+
+  visual_elements:
+
+    - Architecture Diagram
+    - Pipeline Diagram
+    - Dataset Statistics
+    - Evaluation Metrics
+    - Confusion Matrix
+    - Model Comparison
+    - Research Visualization
+    - Screenshots
+    - Demo
+
+
+# ============================================================
+# 18. PROJECT PRIORITY
+# ============================================================
+
+project_priority:
+
+  tier_1:
+    description:
+      "Primary featured case studies"
+
+    projects:
+      - "GMM-HMM EEG Research"
+      - "YOLOv8 Jatim Park Crowd Counting"
+      - "PLTU Paiton Operator Fatigue Detection"
+      - "ScanCV Job Recommendation"
+      - "IoT Tobacco Dust Control System"
+
+  tier_2:
+    description:
+      "Secondary research and technical projects"
+
+    projects:
+      - "Pseudo-Labeling EEG Research"
+      - "Hybrid Multimodal Stress Detection"
+      - "Metaheuristic Supply-Demand Optimization"
+      - "CNN vs RNN Toxic Comments"
+
+  tier_3:
+    description:
+      "Academic foundation projects"
+
+    projects:
+      - "Financial News Sentiment Analysis"
+      - "Loan Approval ANN"
+      - "Brawijaya Journal Clustering"
+
+  additional:
+    - "Digital Skill Fair 23.0"
+
+
+# ============================================================
+# 19. CONTENT HIERARCHY
+# ============================================================
+
+content_priority:
+
+  tier_1:
+    - Professional Identity
+    - Featured Projects
+    - Research Experience
+    - Quantitative Results
+    - Technical Skills
+
+  tier_2:
+    - Professional Experience
+    - Education
+    - Awards
+    - Certifications
+
+  tier_3:
+    - Leadership
+    - Organization
+    - Volunteering
+    - Earlier Academic Projects
+
+
+# ============================================================
+# 20. WRITING RULES
+# ============================================================
+
+content_rules:
+
+  - >
+    Prioritize measurable results whenever verified metrics are available.
+
+  - >
+    Clearly distinguish personal contribution from overall team/project
+    outcomes.
+
+  - >
+    Use technically accurate terminology.
+
+  - >
+    Do not convert academic projects into professional employment claims.
+
+  - >
+    Do not invent technologies, metrics, users, deployments, publications,
+    certifications, companies, or responsibilities.
+
+  - >
+    Do not remove information simply because it appears only in LinkedIn
+    or in previously supplied project context.
+
+  - >
+    CV information should enrich rather than replace existing portfolio
+    information.
+
+  - >
+    Project descriptions should emphasize problem → method → result →
+    impact.
+
+  - >
+    Avoid generic statements such as "worked on AI" when a technical
+    description is available.
+
+
+# ============================================================
+# 21. SCIENTIFIC CLAIM CONTROL
+# ============================================================
+
+scientific_claims:
+
+  EEG:
+
+    preferred:
+      - "EEG pattern analysis"
+      - "Latent EEG representation"
+      - "Stress-pattern analysis"
+      - "Patterns associated with stress-inducing activities"
+      - "Pseudo-labeling"
+      - "Probabilistic latent representation"
+
+    avoid:
+      - "Clinical stress diagnosis"
+      - "Medical diagnosis"
+      - "Clinically validated stress detector"
+
+  machine_learning:
+
+    preferred:
+      - "Achieved X% accuracy"
+      - "Evaluated using GroupKFold"
+      - "Benchmarked against..."
+      - "Demonstrated..."
+      - "Produced..."
+
+    avoid_without_evidence:
+      - "State-of-the-art"
+      - "Production-ready"
+      - "Enterprise-grade"
+      - "Best-performing system"
+
+
+# ============================================================
+# 22. DESIGN DIRECTION
+# ============================================================
+
+design:
+
+  personality:
+    - Technical
+    - Minimal
+    - Professional
+    - Research-oriented
+    - Modern
+    - Data-driven
+    - Precise
+
+  visual_language:
+    - Technical diagrams
+    - Metric cards
+    - Research figures
+    - Model architectures
+    - Project screenshots
+    - Timeline
+    - Data visualizations
+    - Subtle grid
+    - Clean typography
+
+  avoid:
+    - Generic robot imagery
+    - Excessive neon
+    - Excessive glassmorphism
+    - Generic AI stock imagery
+    - Overly playful student aesthetics
+    - Excessive animations
+    - Heavy particle effects
+
+  animation:
+    intensity:
+      "Subtle"
+
+    purpose:
+      - Navigation feedback
+      - Section transitions
+      - Metric reveal
+      - Project interactions
+
+
+# ============================================================
+# 23. CONTACT
+# ============================================================
+
+contact:
+
+  heading:
+    "Let's Build Intelligent Systems"
+
+  description:
+    >
+    Interested in AI research, machine learning, computer vision,
+    data-driven systems, or intelligent applications? Let's connect.
+
+  primary:
+    email:
+      "professionalfarelrakhad@gmail.com"
+
+    linkedin:
+      "https://www.linkedin.com/in/farel-rakha-dzakwan/"
+
+  secondary:
+    github:
+      "https://github.com/farelrakhadzakwan/"
+
+    cv:
+      "[INSERT VERIFIED CV URL]"
+
+  privacy:
+    >
+    Use email and LinkedIn as the primary public contact channels.
+    Do not unnecessarily expose private contact information on the
+    homepage.

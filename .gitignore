@@ -1,0 +1,13 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
+*.swo
+
+# Sensitive / large unused files
+PasRakhaFormalFix.png
+profile.png
+
+# Logs
+*.log
