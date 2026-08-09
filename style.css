@@ -1301,22 +1301,23 @@ a.cert-item:hover .cert-ext-icon {
 .contact-links {
   display: flex;
   justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  gap: 14px;
+  flex-wrap: nowrap;
 }
 
 .contact-link {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 28px;
+  padding: 12px 22px;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   color: var(--text-primary);
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   transition: var(--transition);
   background: var(--bg-card);
+  white-space: nowrap;
 }
 
 .contact-link:hover {
@@ -1335,6 +1336,12 @@ a.cert-item:hover .cert-ext-icon {
 .contact-link svg {
   width: 18px;
   height: 18px;
+}
+
+.contact-link-wa:hover {
+  border-color: #25D366;
+  background: rgba(37, 211, 102, 0.08);
+  color: #25D366;
 }
 
 /* ========== MARQUEE TICKER ========== */
@@ -1663,6 +1670,18 @@ a.cert-item:hover .cert-ext-icon {
     grid-template-columns: 1fr;
   }
 
+  .contact-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-link {
+    justify-content: center;
+  }
+}
+
+/* Small mobile: 480px and below — stack contact buttons */
+@media (max-width: 480px) {
   .contact-links {
     flex-direction: column;
     align-items: stretch;
