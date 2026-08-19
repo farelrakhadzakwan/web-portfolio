@@ -98,7 +98,8 @@ Preserve the following semantic sections while applying the new design system:
 6. **Experience**: Timeline format.
 7. **Skills**: Bento grid with technical tags.
 8. **Achievements**: Spotlight awards and verified certifications.
-9. **Contact**: Simple, accessible links with a "Copy to Clipboard" email button.
+9. **Organizations & Activities**: Timeline format for leadership, advocacy, and event coordination roles.
+10. **Contact**: Simple, accessible links with a "Copy to Clipboard" email button.
 
 ---
 
