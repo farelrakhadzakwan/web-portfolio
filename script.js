@@ -56,17 +56,103 @@ function updateActiveNav() {
 }
 window.addEventListener('scroll', updateActiveNav);
 
-// ========== FADE IN ON SCROLL ==========
-const fadeEls = document.querySelectorAll('.fade-in');
-const fadeObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      fadeObserver.unobserve(entry.target);
-    }
+// ========== SCROLL REVEAL WITH STAGGER ==========
+function initScrollReveal() {
+  const fadeEls = document.querySelectorAll('.fade-in');
+
+  // Group elements by their parent section for staggering
+  const sectionGroups = new Map();
+  fadeEls.forEach(el => {
+    const section = el.closest('.section, .hero, .metrics-bar, .footer');
+    const key = section ? section.id || section.className : 'default';
+    if (!sectionGroups.has(key)) sectionGroups.set(key, []);
+    sectionGroups.get(key).push(el);
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-fadeEls.forEach(el => fadeObserver.observe(el));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const section = el.closest('.section, .hero, .metrics-bar, .footer');
+        const key = section ? section.id || section.className : 'default';
+        const group = sectionGroups.get(key) || [];
+        const index = group.indexOf(el);
+
+        // Stagger delay: 120ms between siblings
+        const delay = index * 120;
+        el.style.transitionDelay = `${delay}ms`;
+        el.classList.add('visible');
+
+        // Clear delay after animation completes
+        setTimeout(() => { el.style.transitionDelay = ''; }, delay + 900);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
+
+  fadeEls.forEach(el => observer.observe(el));
+}
+initScrollReveal();
+
+// Also reveal child cards/items with stagger inside grids
+function initGridStagger() {
+  const grids = document.querySelectorAll('.skills-grid, .achievements-grid, .projects-grid');
+  grids.forEach(grid => {
+    const children = grid.children;
+    Array.from(children).forEach((child, i) => {
+      child.style.opacity = '0';
+      child.style.transform = 'translateY(30px)';
+      child.style.transition = 'opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1)';
+    });
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          Array.from(children).forEach((child, i) => {
+            setTimeout(() => {
+              child.style.opacity = '1';
+              child.style.transform = 'translateY(0)';
+            }, i * 100);
+          });
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    obs.observe(grid);
+  });
+}
+initGridStagger();
+
+// ========== 3D TILT EFFECT ON PROJECT CARDS ==========
+function initTiltEffect() {
+  const cards = document.querySelectorAll('.project-card, .skill-group, .achievement-card');
+  
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -4;
+      const rotateY = ((x - centerX) / centerX) * 4;
+
+      card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+      card.style.transition = 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+      setTimeout(() => { card.style.transition = ''; }, 500);
+    });
+
+    card.addEventListener('mouseenter', () => {
+      card.style.transition = 'none';
+    });
+  });
+}
+initTiltEffect();
 
 // ========== METRIC COUNTER ANIMATION ==========
 function animateCounter(el) {
@@ -257,3 +343,18 @@ if (emailCopyBtn) {
     });
   });
 }
+
+// ========== GLOW FOLLOW ON HOVER ==========
+function initGlowFollow() {
+  const cards = document.querySelectorAll('.project-card, .skill-group');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--glow-x', `${x}px`);
+      card.style.setProperty('--glow-y', `${y}px`);
+    });
+  });
+}
+initGlowFollow();

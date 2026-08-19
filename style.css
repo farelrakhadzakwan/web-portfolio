@@ -1,5 +1,5 @@
 /* ========== IMPORTS ========== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 /* ========== CSS VARIABLES ========== */
 :root {
@@ -23,6 +23,8 @@
   --gradient-hero: linear-gradient(180deg, #0a0a0f 0%, #10101a 100%);
   --font-sans: 'Inter', -apple-system, sans-serif;
   --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --accent-neon: #00ff88;
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
@@ -134,13 +136,31 @@ button {
 /* Fade in animation */
 .fade-in {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Monospace utility for terminal-vibe elements */
+.font-mono,
+.tag,
+.skill-tag,
+.timeline-period,
+.pipeline-tag,
+.pipeline-tools-badge,
+.cert-date,
+.metric-label,
+.diag-item,
+.project-type,
+.project-result,
+.achievement-spotlight-badge,
+.timeline-result,
+.marquee-track span {
+  font-family: var(--font-mono) !important;
 }
 
 /* ========== NAVBAR ========== */
@@ -156,10 +176,12 @@ button {
 }
 
 .navbar.scrolled {
-  background: rgba(10, 10, 15, 0.92);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(10, 10, 15, 0.6);
+  backdrop-filter: blur(20px) saturate(1.8);
+  -webkit-backdrop-filter: blur(20px) saturate(1.8);
+  border-bottom: 1px solid rgba(79, 124, 255, 0.12);
   padding: 10px 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 }
 
 .navbar .container {
@@ -454,6 +476,14 @@ button {
   transform: translateY(-2px);
   box-shadow: 0 6px 24px rgba(79, 124, 255, 0.35);
   color: #fff;
+}
+
+.btn-primary svg {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary:hover svg {
+  transform: translateX(4px);
 }
 
 .btn-secondary {
@@ -772,10 +802,26 @@ button {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 32px;
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  --glow-x: 50%;
+  --glow-y: 50%;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(300px circle at var(--glow-x) var(--glow-y), rgba(79, 124, 255, 0.06), transparent 60%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover::after {
+  opacity: 1;
 }
 
 .project-card::before {
@@ -791,9 +837,9 @@ button {
 }
 
 .project-card:hover {
-  border-color: var(--border-light);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(79, 124, 255, 0.12);
+  border-color: rgba(79, 124, 255, 0.4);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(79, 124, 255, 0.08), 0 0 0 1px rgba(79, 124, 255, 0.2);
 }
 
 /* Featured card stronger accent */
@@ -991,16 +1037,40 @@ button {
 }
 
 .skill-group {
-  background: var(--bg-card);
+  background: rgba(22, 22, 37, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 28px;
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-group::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  padding: 1px;
+  background: linear-gradient(135deg, transparent, rgba(79, 124, 255, 0.3), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.skill-group:hover::before {
+  opacity: 1;
 }
 
 .skill-group:hover {
-  border-color: var(--border-light);
-  box-shadow: var(--shadow-glow);
+  border-color: rgba(79, 124, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(79, 124, 255, 0.06);
+  transform: translateY(-4px);
 }
 
 .skill-group-icon {
@@ -1067,12 +1137,14 @@ button {
   display: block;
   text-decoration: none;
   color: inherit;
-  background: var(--bg-card);
+  background: rgba(22, 22, 37, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 28px;
   text-align: center;
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
 }
@@ -1493,18 +1565,19 @@ a.cert-item:hover .cert-ext-icon {
 }
 
 .diag-item {
-  font-family: var(--font-display);
   font-size: 0.78rem;
-  letter-spacing: 0.5px;
-  color: var(--text-secondary);
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
   display: flex;
   align-items: center;
   gap: 8px;
+  text-transform: uppercase;
 }
 
 .diag-item strong {
-  color: var(--text-primary);
+  color: var(--accent-neon);
   font-weight: 600;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
 }
 
 .status-pulse {
