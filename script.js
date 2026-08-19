@@ -126,6 +126,8 @@ initGridStagger();
 
 // ========== 3D TILT EFFECT ON PROJECT CARDS ==========
 function initTiltEffect() {
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return; // Disable on touch devices
+  
   const cards = document.querySelectorAll('.project-card, .skill-group, .achievement-card');
   
   cards.forEach(card => {
@@ -346,6 +348,8 @@ if (emailCopyBtn) {
 
 // ========== GLOW FOLLOW ON HOVER ==========
 function initGlowFollow() {
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return; // Disable on touch devices
+  
   const cards = document.querySelectorAll('.project-card, .skill-group');
   cards.forEach(card => {
     card.addEventListener('mousemove', (e) => {

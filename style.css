@@ -1033,7 +1033,17 @@ button {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
   gap: 20px;
+}
+
+/* Bento box: first and last skill cards span wider */
+.skill-group:nth-child(1) {
+  grid-column: span 2;
+}
+
+.skill-group:nth-child(5) {
+  grid-column: span 2;
 }
 
 .skill-group {
@@ -1131,6 +1141,12 @@ button {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin-bottom: 48px;
+}
+
+/* Bento: spotlight cards span 2 cols */
+.achievement-card.achievement-spotlight:first-child {
+  grid-column: span 2;
+  grid-row: span 1;
 }
 
 .achievement-card {
@@ -1628,8 +1644,17 @@ a.cert-item:hover .cert-ext-icon {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .skill-group:nth-child(1),
+  .skill-group:nth-child(5) {
+    grid-column: span 1;
+  }
+
   .achievements-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievement-card.achievement-spotlight:first-child {
+    grid-column: span 2;
   }
 }
 
@@ -1687,8 +1712,25 @@ a.cert-item:hover .cert-ext-icon {
     grid-template-columns: 1fr;
   }
 
+  .skill-group:nth-child(1),
+  .skill-group:nth-child(5) {
+    grid-column: span 1;
+  }
+
   .achievements-grid {
     grid-template-columns: 1fr;
+  }
+
+  .achievement-card.achievement-spotlight:first-child {
+    grid-column: span 1;
+  }
+  
+  .skill-group {
+    padding: 20px; /* smaller padding on mobile */
+  }
+  
+  .achievement-card {
+    padding: 20px;
   }
 
   .cert-list {
