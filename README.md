@@ -15,6 +15,8 @@ Personal portfolio website for **Farel Rakha Dzakwan** (AI Engineer & AI Researc
   - **Text Scramble Matrix Effect**: Scrambles section headers and project tags into random cyber characters on hover.
   - **Animated Metric Counters**: Smooth count-up animation for key performance indicators (GPA, project counts, awards).
   - **Live WIB Clock & Model Status**: Diagnostic footer showing real-time WIB timezone clock and glowing inference readiness status.
+- **Symmetrical Grid System**: Perfectly balanced grids for Skills (3x2) and Achievements (2x2), dropping down uniformly to single columns on mobile.
+- **Responsive Timeline Architecture**: Experiences and Organizational Activity use a modern horizontal timeline on desktop to maximize screen space, and gracefully degrade to a vertical timeline on mobile devices.
 - **Scroll Reveal & Stagger Animations**: Intersection Observer implementation triggering staggered fade-in & slide-up entries for sections and grid items.
 - **Interactive Research → Engineering Pipeline**: 10-step interactive workflow detailing research methodology to production deployment.
 
@@ -29,7 +31,7 @@ WebPortfolio/
 ├── index.html               # Main HTML document (Semantic HTML5)
 ├── style.css                # Custom CSS Design System (Glassmorphism & Cyber Theme)
 ├── script.js                 # Vanilla JS (Intersection Observer, 3D Tilt, Scramble, Counter)
-├── MasterContentSpesification.yaml # Full content specification & raw data
+├── MasterPrompt.md           # Full design blueprint & UI/UX spec
 └── README.md                # Project documentation
 ```
 
