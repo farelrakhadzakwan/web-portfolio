@@ -110,26 +110,6 @@ body {
   animation: pulse-dot 2s ease-in-out infinite;
 }
 
-@keyframes marquee-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  display: inline-flex;
-  gap: 2.25rem;
-  animation: marquee-scroll 28s linear infinite;
-  will-change: transform;
-}
-
-.animate-marquee:hover {
-  animation-play-state: paused;
-}
-
 /* Prefers-reduced-motion fallback */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -139,9 +119,6 @@ body {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
-  }
-  .animate-marquee {
-    animation: none !important;
   }
   .animate-pulse-dot {
     animation: none !important;
