@@ -1,0 +1,31 @@
+{
+  "name": "webportfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for **Farel Rakha Dzakwan** (AI Engineer & AI Researcher). Built with high visual aesthetic standards (Cyber-Minimalism Dark Mode, Glassmorphism, Monospace Typography, and Interactive Micro-interactions).",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farelrakhadzakwan/web-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farelrakhadzakwan/web-portfolio/issues"
+  },
+  "homepage": "https://github.com/farelrakhadzakwan/web-portfolio#readme",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "prettier": "^3.9.6",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.2.2"
+  }
+}

@@ -1,13 +1,30 @@
-# OS / Editor
-.DS_Store
-Thumbs.db
-.vscode/
-*.swp
-*.swo
+# Dependencies
+node_modules/
+.pnpm-store/
 
-# Sensitive / large unused files
-PasRakhaFormalFix.png
-profile.png
+# Production build output
+dist/
+dist-ssr/
+*.local
 
 # Logs
+logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Raw uncompressed / unused media source files
+docs/raw_assets/
