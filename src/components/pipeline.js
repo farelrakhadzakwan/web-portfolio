@@ -13,9 +13,9 @@ export function initPipeline() {
 
   function selectStep(stepEl) {
     pipelineSteps.forEach(s => {
-      s.classList.remove('active', 'border-accent-blue/40', 'bg-accent-blue/10');
-      s.classList.add('border-border-subtle', 'bg-bg-card/30');
-      const stepNumSpan = s.querySelector('.font-mono');
+      s.classList.remove('active', 'border-accent-blue', 'bg-accent-blue/5');
+      s.classList.add('border-transparent');
+      const stepNumSpan = s.querySelector('.step-num');
       if (stepNumSpan) {
         stepNumSpan.classList.remove('text-accent-blue');
         stepNumSpan.classList.add('text-text-muted');
@@ -23,9 +23,9 @@ export function initPipeline() {
       s.setAttribute('aria-selected', 'false');
     });
 
-    stepEl.classList.add('active', 'border-accent-blue/40', 'bg-accent-blue/10');
-    stepEl.classList.remove('border-border-subtle', 'bg-bg-card/30');
-    const activeStepNumSpan = stepEl.querySelector('.font-mono');
+    stepEl.classList.add('active', 'border-accent-blue', 'bg-accent-blue/5');
+    stepEl.classList.remove('border-transparent');
+    const activeStepNumSpan = stepEl.querySelector('.step-num');
     if (activeStepNumSpan) {
       activeStepNumSpan.classList.add('text-accent-blue');
       activeStepNumSpan.classList.remove('text-text-muted');
