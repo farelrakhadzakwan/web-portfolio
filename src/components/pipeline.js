@@ -1,7 +1,7 @@
 /**
  * Research Pipeline Module
- * Handles step selection, keyboard navigation, expand/minimize toggle,
- * and updates detail view dynamically.
+ * Handles step selection, keyboard navigation, and dynamic deep dive updates.
+ * Respects prefers-reduced-motion setting.
  */
 export function initPipeline() {
   const pipelineSteps = document.querySelectorAll('.pipeline-step[data-step]');
@@ -9,29 +9,40 @@ export function initPipeline() {
   const pipelineStepTitle = document.getElementById('pipelineStepTitle');
   const pipelineStepDesc = document.getElementById('pipelineStepDesc');
   const pipelineStepTools = document.getElementById('pipelineStepTools');
-  const pipelineToggleBtn = document.getElementById('pipelineToggleBtn');
-  const pipelineStepsWrapper = document.getElementById('pipelineStepsWrapper');
+  const pipelineStepCase = document.getElementById('pipelineStepCase');
 
   function selectStep(stepEl) {
     pipelineSteps.forEach(s => {
-      s.classList.remove('active', 'bg-accent-blue/10', 'text-text-primary');
-      s.classList.add('text-text-secondary');
+      s.classList.remove('active', 'border-accent-blue/40', 'bg-accent-blue/10');
+      s.classList.add('border-border-subtle', 'bg-bg-card/30');
+      const stepNumSpan = s.querySelector('.font-mono');
+      if (stepNumSpan) {
+        stepNumSpan.classList.remove('text-accent-blue');
+        stepNumSpan.classList.add('text-text-muted');
+      }
       s.setAttribute('aria-selected', 'false');
     });
 
-    stepEl.classList.add('active', 'bg-accent-blue/10', 'text-text-primary');
-    stepEl.classList.remove('text-text-secondary');
+    stepEl.classList.add('active', 'border-accent-blue/40', 'bg-accent-blue/10');
+    stepEl.classList.remove('border-border-subtle', 'bg-bg-card/30');
+    const activeStepNumSpan = stepEl.querySelector('.font-mono');
+    if (activeStepNumSpan) {
+      activeStepNumSpan.classList.add('text-accent-blue');
+      activeStepNumSpan.classList.remove('text-text-muted');
+    }
     stepEl.setAttribute('aria-selected', 'true');
 
     const stepNum = stepEl.getAttribute('data-step');
     const title = stepEl.getAttribute('data-title');
     const detail = stepEl.getAttribute('data-detail');
     const tools = stepEl.getAttribute('data-tools');
+    const caseText = stepEl.getAttribute('data-case');
 
-    if (pipelineStepNum) pipelineStepNum.textContent = `STEP ${stepNum}`;
+    if (pipelineStepNum) pipelineStepNum.textContent = `STAGE ${stepNum} OF 10`;
     if (pipelineStepTitle) pipelineStepTitle.textContent = title;
     if (pipelineStepDesc) pipelineStepDesc.textContent = detail;
     if (pipelineStepTools) pipelineStepTools.textContent = `Tools: ${tools}`;
+    if (pipelineStepCase && caseText) pipelineStepCase.textContent = caseText;
   }
 
   pipelineSteps.forEach(step => {
@@ -43,28 +54,4 @@ export function initPipeline() {
       }
     });
   });
-
-  if (pipelineToggleBtn && pipelineStepsWrapper) {
-    pipelineToggleBtn.addEventListener('click', () => {
-      const isExpanded = pipelineStepsWrapper.classList.contains('expanded');
-      const toggleLabel = pipelineToggleBtn.querySelector('.toggle-label');
-      const chevron = pipelineToggleBtn.querySelector('.toggle-chevron');
-
-      if (isExpanded) {
-        pipelineStepsWrapper.classList.remove('expanded');
-        pipelineStepsWrapper.classList.add('max-h-[160px]');
-        pipelineStepsWrapper.classList.remove('max-h-[800px]');
-        if (toggleLabel) toggleLabel.textContent = 'Expand (10 Steps)';
-        if (chevron) chevron.style.transform = 'rotate(0deg)';
-        pipelineToggleBtn.setAttribute('aria-expanded', 'false');
-      } else {
-        pipelineStepsWrapper.classList.add('expanded');
-        pipelineStepsWrapper.classList.remove('max-h-[160px]');
-        pipelineStepsWrapper.classList.add('max-h-[800px]');
-        if (toggleLabel) toggleLabel.textContent = 'Minimize';
-        if (chevron) chevron.style.transform = 'rotate(180deg)';
-        pipelineToggleBtn.setAttribute('aria-expanded', 'true');
-      }
-    });
-  }
 }
