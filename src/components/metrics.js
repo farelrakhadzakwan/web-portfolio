@@ -1,7 +1,7 @@
 /**
  * Metrics Counter Module
  * Smooth count-up animation for performance indicator numbers (GPA, project counts, awards).
- * Respects prefers-reduced-motion setting.
+ * Respects prefers-reduced-motion setting and preserves accessible initial text.
  */
 export function initMetrics() {
   const metricEls = document.querySelectorAll('.metric-value[data-value]');
@@ -18,8 +18,13 @@ export function initMetrics() {
 
     const isDecimal = target.includes('.');
     const numericPart = parseFloat(target.replace(/[^0-9.]/g, ''));
+    if (isNaN(numericPart)) {
+      el.textContent = target;
+      return;
+    }
+
     const suffix = target.replace(/[0-9.]/g, '');
-    const duration = 1400;
+    const duration = 1200;
     const start = performance.now();
 
     function update(now) {
@@ -50,7 +55,7 @@ export function initMetrics() {
         metricObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.4 });
+  }, { threshold: 0.1 });
 
   metricEls.forEach(el => metricObserver.observe(el));
 }
