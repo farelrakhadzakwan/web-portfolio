@@ -18,7 +18,7 @@ Personal portfolio website for **Farel Rakha Dzakwan** (AI Engineer & AI Researc
 - **Symmetrical Grid System**: Perfectly balanced grids for Skills (3x2) and Achievements (2x2), dropping down uniformly to single columns on mobile.
 - **Responsive Timeline Architecture**: Experiences and Organizational Activity use a modern horizontal timeline on desktop to maximize screen space, and gracefully degrade to a vertical timeline on mobile devices.
 - **Scroll Reveal & Stagger Animations**: Intersection Observer implementation triggering staggered fade-in & slide-up entries for sections and grid items.
-- **Interactive Research → Engineering Pipeline**: 10-step interactive workflow detailing research methodology to production deployment.
+- **Interactive Research to Engineering Pipeline**: 10-step interactive workflow detailing research methodology to production deployment.
 
 ---
 
