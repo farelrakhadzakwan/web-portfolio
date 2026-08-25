@@ -159,157 +159,210 @@
     <!-- ABOUT SECTION -->
     <section class="py-24" id="about">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="fade-in mb-12">
-          <div class="font-display text-xs font-semibold tracking-[3px] uppercase text-accent-blue mb-2 flex items-center gap-2">
-            <span class="w-6 h-0.5 bg-gradient-to-r from-accent-blue to-accent-violet rounded-full"></span>
-            About
+        
+        <!-- Section Header -->
+        <div class="fade-in mb-14">
+          <div class="font-mono text-xs font-bold tracking-[0.2em] uppercase text-accent-blue mb-3">
+            01 / ABOUT
           </div>
-          <h2 class="font-display text-3xl sm:text-4xl font-bold text-text-primary">Who I Am</h2>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary tracking-tight">
+            Who I Am
+          </h2>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          <!-- Text Content -->
-          <div class="fade-in space-y-5 text-text-secondary text-base leading-relaxed">
-            <p>
-              Artificial Intelligence Engineer and AI Researcher, <strong class="text-text-primary font-semibold">recently graduated in Informatics Engineering from Universitas Brawijaya</strong> with a cumulative <strong class="text-text-primary font-semibold">GPA of 3.73 / 4.00</strong>. Driven by rigorous AI research, national competition achievements, and real-world engineering applications.
-            </p>
-            <p>
-              My experience spans applied AI research, machine learning, deep learning, computer vision, EEG signal processing, NLP, data analysis, optimization, and intelligent application development.
-            </p>
-            <p>
-              Projects range from probabilistic EEG representation learning to real-time crowd counting, industrial fatigue detection, and semantic job recommendation systems.
+        <!-- Editorial Content Grid -->
+        <div class="grid lg:grid-cols-[1fr_320px] gap-12 lg:gap-20 items-start">
+          
+          <!-- Narrative Storytelling (Left Column) -->
+          <div class="fade-in space-y-8">
+            <!-- Level 1 Typography Statement -->
+            <p class="font-display text-xl sm:text-2xl text-text-primary font-medium leading-relaxed tracking-tight">
+              Artificial Intelligence Engineer and AI Researcher, recently graduated in Informatics Engineering from <span class="text-accent-blue font-semibold">Universitas Brawijaya</span> with a cumulative <span class="text-text-primary font-bold underline decoration-accent-blue/40 underline-offset-4">GPA of 3.73 / 4.00</span>.
             </p>
 
-            <div class="grid sm:grid-cols-3 gap-3 pt-4 border-t border-border-subtle">
-              <div class="flex items-center gap-2.5 p-3 rounded-lg border border-border-subtle bg-bg-card/40 text-text-primary text-xs font-medium">
-                <svg class="w-4 h-4 text-accent-blue shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M12 15a6 6 0 0 0 6-6V3H6v6a6 6 0 0 0 6 6zM12 15v7" />
-                </svg>
-                <span class="leading-tight">1st Place — IEEE FEST Winner</span>
-              </div>
-              <div class="flex items-center gap-2.5 p-3 rounded-lg border border-border-subtle bg-bg-card/40 text-text-primary text-xs font-medium">
-                <svg class="w-4 h-4 text-accent-blue shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m9 12 2 2 4-4" />
-                </svg>
-                <span class="leading-tight">Registered HAKI IP Holder</span>
-              </div>
-              <div class="flex items-center gap-2.5 p-3 rounded-lg border border-border-subtle bg-bg-card/40 text-text-primary text-xs font-medium">
-                <svg class="w-4 h-4 text-accent-blue shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="10" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                </svg>
-                <span class="leading-tight">Top 10 National AI Talent</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Interactive Research Pipeline Box -->
-          <div class="fade-in bg-bg-card border border-border-subtle rounded-2xl p-6 lg:p-8 shadow-xl">
-            <div class="flex items-center justify-between gap-4 mb-6">
-              <h3 class="font-display text-xs font-bold uppercase tracking-wider text-text-muted">
-                Interactive Research → Engineering Pipeline
-              </h3>
-              <button class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-accent-blue/10 border border-accent-blue/20 text-accent-blue hover:bg-accent-blue/20 hover:text-white transition-all cursor-pointer focus-visible:ring-2 focus-visible:ring-accent-blue"
-                id="pipelineToggleBtn" aria-expanded="false" aria-controls="pipelineStepsWrapper">
-                <span class="toggle-label">Expand (10 Steps)</span>
-                <svg class="toggle-chevron w-3.5 h-3.5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
-                </svg>
-              </button>
-            </div>
-
-            <!-- Steps list -->
-            <div class="relative overflow-hidden transition-all duration-500 max-h-[160px]" id="pipelineStepsWrapper">
-              <div class="space-y-1" id="pipelineSteps" role="tablist" aria-label="Research Pipeline Steps">
-                <div class="pipeline-step active bg-accent-blue/10 text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
-                  role="tab" tabindex="0" aria-selected="true" data-step="01" data-title="Problem Definition"
-                  data-detail="Scoping domain challenges, formulating research hypotheses, and defining target metrics (Accuracy, BIC, Silhouette)."
-                  data-tools="Hypothesis Testing · Literature Review">
-                  <span class="w-2.5 h-2.5 rounded-full bg-accent-blue shadow-[0_0_8px_var(--color-accent-blue)] shrink-0"></span>
-                  01. Problem Definition
-                </div>
-                <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
-                  role="tab" tabindex="0" aria-selected="false" data-step="02" data-title="Dataset Preparation"
-                  data-detail="Collecting &amp; processing multi-subject EEG (50 participants) and video surveillance datasets."
-                  data-tools="EEG Electrode Mapping · OpenCV Streams">
-                  <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
-                  02. Dataset Preparation
-                </div>
-                <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
-                  role="tab" tabindex="0" aria-selected="false" data-step="03" data-title="Data Processing"
-                  data-detail="Signal filtering, Welch PSD extraction, bandpower calculations, and video frame preprocessing."
-                  data-tools="SciPy · MNE-Python · NumPy">
-                  <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
-                  03. Data Processing
-                </div>
-                <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
-                  role="tab" tabindex="0" aria-selected="false" data-step="04" data-title="Exploratory Analysis"
-                  data-detail="Latent feature structure analysis, temporal dynamics inspection, and outlier detection."
-                  data-tools="Matplotlib · Seaborn · PCA">
-                  <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
-                  04. Exploratory Analysis
-                </div>
-                <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
-                  role="tab" tabindex="0" aria-selected="false" data-step="05" data-title="Feature Engineering"
-                  data-detail="Pseudo-labeling prefrontal cortex signals, feature scaling, and latent state space design."
-                  data-tools="K-Means · GMM · Silhouette Scoring">
-                  <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
-                  05. Feature Engineering
-                </div>
-                <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
-                  role="tab" tabindex="0" aria-selected="false" data-step="06" data-title="Model Development"
-                  data-detail="Designing GMM-HMM models, YOLOv8 object counters, and BAAI semantic embedding pipelines."
-                  data-tools="PyTorch · Scikit-learn · YOLOv8">
-                  <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
-                  06. Model Development
-                </div>
-                <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
-                  role="tab" tabindex="0" aria-selected="false" data-step="07" data-title="Experimentation"
-                  data-detail="Hyperparameter tuning, cross-validation, and multi-class model benchmarking."
-                  data-tools="Random Forest · SVM · XGBoost">
-                  <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
-                  07. Experimentation
-                </div>
-                <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
-                  role="tab" tabindex="0" aria-selected="false" data-step="08" data-title="Evaluation"
-                  data-detail="Achieved 97.18% EEG accuracy, 0.3601 Silhouette score, and 84% recommendation accuracy."
-                  data-tools="ROC AUC · Confusion Matrix · BIC Score">
-                  <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
-                  08. Evaluation
-                </div>
-                <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
-                  role="tab" tabindex="0" aria-selected="false" data-step="09" data-title="Interpretation"
-                  data-detail="Translating probabilistic representations into actionable occupational stress &amp; fatigue alerts."
-                  data-tools="Domain Knowledge · HAKI Registration">
-                  <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
-                  09. Interpretation
-                </div>
-                <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
-                  role="tab" tabindex="0" aria-selected="false" data-step="10" data-title="Application / Deployment"
-                  data-detail="Packaging models into real-time FastAPI services, Docker containers, and Web APIs."
-                  data-tools="FastAPI · Docker · ONNX Runtime">
-                  <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
-                  10. Application / Deployment
-                </div>
-              </div>
-            </div>
-
-            <!-- Detail card for current step -->
-            <div class="mt-6 p-5 bg-bg-secondary/80 border border-border-light rounded-xl space-y-2.5" id="pipelineDetailCard" role="tabpanel">
-              <div class="flex items-center gap-3">
-                <span class="font-display text-[0.7rem] font-bold tracking-wider px-2 py-0.5 bg-accent-blue text-white rounded" id="pipelineStepNum">STEP 01</span>
-                <h4 class="font-display text-base font-bold text-text-primary" id="pipelineStepTitle">Problem Definition</h4>
-              </div>
-              <p class="text-xs sm:text-sm text-text-secondary leading-relaxed" id="pipelineStepDesc">
-                Scoping domain challenges, formulating research hypotheses, and defining target metrics (Accuracy, BIC, Silhouette).
+            <!-- Level 2 Typography Paragraphs -->
+            <div class="space-y-5 text-text-secondary text-base sm:text-lg leading-relaxed font-normal">
+              <p>
+                My work bridges rigorous theoretical AI research and production-grade engineering applications. I specialize in machine learning, deep learning, computer vision, EEG signal processing, data analysis, and natural language processing.
               </p>
-              <div class="font-mono text-xs font-semibold text-accent-cyan bg-accent-cyan/10 border border-accent-cyan/20 px-3 py-1.5 rounded-md inline-block" id="pipelineStepTools">
-                Tools: Hypothesis Testing · Literature Review
+              <p>
+                Projects range from probabilistic EEG latent representation learning for stress pattern analysis to real-time computer vision crowd monitoring for Jatim Park, industrial operator fatigue detection for PLTU Paiton, and semantic job recommendation engines.
+              </p>
+            </div>
+          </div>
+
+          <!-- Selected Evidence Column (Right Column) -->
+          <div class="fade-in pt-6 lg:pt-0 border-t lg:border-t-0 lg:border-l border-border-subtle lg:pl-10 space-y-8">
+            <div class="font-mono text-xs font-bold uppercase tracking-widest text-text-muted">
+              SELECTED EVIDENCE
+            </div>
+
+            <div class="space-y-6">
+              <!-- Evidence 1: GPA -->
+              <div class="pb-6 border-b border-border-subtle/60">
+                <div class="font-display text-3xl font-extrabold text-text-primary tracking-tight mb-1">
+                  3.73 <span class="text-sm font-normal text-text-muted">/ 4.00</span>
+                </div>
+                <div class="text-xs font-medium text-text-secondary">
+                  Cumulative GPA · Universitas Brawijaya
+                </div>
+              </div>
+
+              <!-- Evidence 2: IEEE FEST -->
+              <div class="pb-6 border-b border-border-subtle/60">
+                <div class="font-display text-xl font-bold text-text-primary tracking-tight mb-1">
+                  1st Place Winner
+                </div>
+                <div class="text-xs font-medium text-text-secondary">
+                  National Research Competition · IEEE FEST 2024
+                </div>
+              </div>
+
+              <!-- Evidence 3: HAKI -->
+              <div class="pb-6 border-b border-border-subtle/60">
+                <div class="font-display text-xl font-bold text-text-primary tracking-tight mb-1">
+                  Registered IP Holder
+                </div>
+                <div class="text-xs font-medium text-text-secondary">
+                  Official HAKI IP Certificate · Kemenkumham RI
+                </div>
+              </div>
+
+              <!-- Evidence 4: Alibaba Top 10 -->
+              <div>
+                <div class="font-display text-xl font-bold text-text-primary tracking-tight mb-1">
+                  Top 10 AI Talent
+                </div>
+                <div class="text-xs font-medium text-text-secondary">
+                  National AI Program · Alibaba Cloud
+                </div>
               </div>
             </div>
 
           </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESEARCH METHODOLOGY SECTION -->
+    <section class="py-16 bg-bg-secondary/40 border-y border-border-subtle">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="fade-in mb-8">
+          <div class="font-mono text-xs font-bold tracking-[0.2em] uppercase text-accent-blue mb-2">
+            RESEARCH METHODOLOGY
+          </div>
+          <h3 class="font-display text-2xl sm:text-3xl font-bold text-text-primary">
+            Interactive Research → Engineering Pipeline
+          </h3>
+        </div>
+
+        <!-- Interactive Research Pipeline Box -->
+        <div class="fade-in bg-bg-card border border-border-subtle rounded-2xl p-6 lg:p-8 shadow-xl">
+          <div class="flex items-center justify-between gap-4 mb-6">
+            <h3 class="font-display text-xs font-bold uppercase tracking-wider text-text-muted">
+              Pipeline Steps (10 Stages)
+            </h3>
+            <button class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-accent-blue/10 border border-accent-blue/20 text-accent-blue hover:bg-accent-blue/20 hover:text-white transition-all cursor-pointer focus-visible:ring-2 focus-visible:ring-accent-blue"
+              id="pipelineToggleBtn" aria-expanded="false" aria-controls="pipelineStepsWrapper">
+              <span class="toggle-label">Expand (10 Steps)</span>
+              <svg class="toggle-chevron w-3.5 h-3.5 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Steps list -->
+          <div class="relative overflow-hidden transition-all duration-500 max-h-[160px]" id="pipelineStepsWrapper">
+            <div class="space-y-1" id="pipelineSteps" role="tablist" aria-label="Research Pipeline Steps">
+              <div class="pipeline-step active bg-accent-blue/10 text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
+                role="tab" tabindex="0" aria-selected="true" data-step="01" data-title="Problem Definition"
+                data-detail="Scoping domain challenges, formulating research hypotheses, and defining target metrics (Accuracy, BIC, Silhouette)."
+                data-tools="Hypothesis Testing · Literature Review">
+                <span class="w-2.5 h-2.5 rounded-full bg-accent-blue shadow-[0_0_8px_var(--color-accent-blue)] shrink-0"></span>
+                01. Problem Definition
+              </div>
+              <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
+                role="tab" tabindex="0" aria-selected="false" data-step="02" data-title="Dataset Preparation"
+                data-detail="Collecting &amp; processing multi-subject EEG (50 participants) and video surveillance datasets."
+                data-tools="EEG Electrode Mapping · OpenCV Streams">
+                <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
+                02. Dataset Preparation
+              </div>
+              <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
+                role="tab" tabindex="0" aria-selected="false" data-step="03" data-title="Data Processing"
+                data-detail="Signal filtering, Welch PSD extraction, bandpower calculations, and video frame preprocessing."
+                data-tools="SciPy · MNE-Python · NumPy">
+                <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
+                03. Data Processing
+              </div>
+              <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
+                role="tab" tabindex="0" aria-selected="false" data-step="04" data-title="Exploratory Analysis"
+                data-detail="Latent feature structure analysis, temporal dynamics inspection, and outlier detection."
+                data-tools="Matplotlib · Seaborn · PCA">
+                <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
+                04. Exploratory Analysis
+              </div>
+              <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
+                role="tab" tabindex="0" aria-selected="false" data-step="05" data-title="Feature Engineering"
+                data-detail="Pseudo-labeling prefrontal cortex signals, feature scaling, and latent state space design."
+                data-tools="K-Means · GMM · Silhouette Scoring">
+                <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
+                05. Feature Engineering
+              </div>
+              <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
+                role="tab" tabindex="0" aria-selected="false" data-step="06" data-title="Model Development"
+                data-detail="Designing GMM-HMM models, YOLOv8 object counters, and BAAI semantic embedding pipelines."
+                data-tools="PyTorch · Scikit-learn · YOLOv8">
+                <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
+                06. Model Development
+              </div>
+              <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
+                role="tab" tabindex="0" aria-selected="false" data-step="07" data-title="Experimentation"
+                data-detail="Hyperparameter tuning, cross-validation, and multi-class model benchmarking."
+                data-tools="Random Forest · SVM · XGBoost">
+                <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
+                07. Experimentation
+              </div>
+              <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
+                role="tab" tabindex="0" aria-selected="false" data-step="08" data-title="Evaluation"
+                data-detail="Achieved 97.18% EEG accuracy, 0.3601 Silhouette score, and 84% recommendation accuracy."
+                data-tools="ROC AUC · Confusion Matrix · BIC Score">
+                <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
+                08. Evaluation
+              </div>
+              <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
+                role="tab" tabindex="0" aria-selected="false" data-step="09" data-title="Interpretation"
+                data-detail="Translating probabilistic representations into actionable occupational stress &amp; fatigue alerts."
+                data-tools="Domain Knowledge · HAKI Registration">
+                <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
+                09. Interpretation
+              </div>
+              <div class="pipeline-step text-text-secondary hover:text-text-primary px-3 py-2 rounded-lg cursor-pointer flex items-center gap-3 text-sm font-medium transition-colors"
+                role="tab" tabindex="0" aria-selected="false" data-step="10" data-title="Application / Deployment"
+                data-detail="Packaging models into real-time FastAPI services, Docker containers, and Web APIs."
+                data-tools="FastAPI · Docker · ONNX Runtime">
+                <span class="w-2.5 h-2.5 rounded-full bg-border-subtle shrink-0"></span>
+                10. Application / Deployment
+              </div>
+            </div>
+          </div>
+
+          <!-- Detail card for current step -->
+          <div class="mt-6 p-5 bg-bg-secondary/80 border border-border-light rounded-xl space-y-2.5" id="pipelineDetailCard" role="tabpanel">
+            <div class="flex items-center gap-3">
+              <span class="font-display text-[0.7rem] font-bold tracking-wider px-2 py-0.5 bg-accent-blue text-white rounded" id="pipelineStepNum">STEP 01</span>
+              <h4 class="font-display text-base font-bold text-text-primary" id="pipelineStepTitle">Problem Definition</h4>
+            </div>
+            <p class="text-xs sm:text-sm text-text-secondary leading-relaxed" id="pipelineStepDesc">
+              Scoping domain challenges, formulating research hypotheses, and defining target metrics (Accuracy, BIC, Silhouette).
+            </p>
+            <div class="font-mono text-xs font-semibold text-accent-cyan bg-accent-cyan/10 border border-accent-cyan/20 px-3 py-1.5 rounded-md inline-block" id="pipelineStepTools">
+              Tools: Hypothesis Testing · Literature Review
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -515,75 +568,189 @@
     <!-- EXPERIENCE SECTION -->
     <section class="py-24" id="experience">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="fade-in mb-12">
-          <div class="font-display text-xs font-semibold tracking-[3px] uppercase text-accent-blue mb-2 flex items-center gap-2">
-            <span class="w-6 h-0.5 bg-gradient-to-r from-accent-blue to-accent-violet rounded-full"></span>
-            Experience
+        
+        <!-- Section Header -->
+        <div class="fade-in mb-16 max-w-2xl">
+          <div class="font-mono text-xs font-bold tracking-[0.2em] uppercase text-accent-blue mb-3">
+            04 / EXPERIENCE
           </div>
-          <h2 class="font-display text-3xl sm:text-4xl font-bold text-text-primary mb-2">Professional Journey</h2>
-          <p class="text-text-secondary text-base">Laboratory leadership, research internships, and technical training delivery.</p>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary tracking-tight mb-4">
+            Professional Journey
+          </h2>
+          <p class="text-text-secondary text-base sm:text-lg leading-relaxed">
+            Laboratory leadership, applied AI research internships, and technical training delivery.
+          </p>
         </div>
 
-        <div class="fade-in horizontal-timeline vertical-timeline grid lg:grid-cols-4 gap-8 lg:gap-6">
+        <!-- Vertical Editorial Timeline Container -->
+        <div class="fade-in divide-y divide-border-subtle/80 border-y border-border-subtle/80">
 
-          <div class="relative pt-6 lg:pt-10">
-            <div class="absolute lg:top-2 left-0 lg:left-0 w-3.5 h-3.5 rounded-full bg-accent-blue shadow-[0_0_12px_var(--color-accent-blue)] z-10"></div>
-            <div class="font-mono text-xs text-text-muted font-medium mb-2">August 2025 – December 2025</div>
-            <h3 class="font-display text-base font-semibold text-text-primary mb-1">Coordinator Laboratory Assistant — Neural Networks Course</h3>
-            <div class="text-xs font-semibold text-accent-blue mb-3">Universitas Brawijaya</div>
-            <ul class="text-xs text-text-secondary space-y-1.5 mb-4">
-              <li class="relative pl-3 before:content-['›'] before:absolute before:left-0 before:text-accent-blue before:font-bold">Coordinated 14 laboratory assistants across 7 classes</li>
-              <li class="relative pl-3 before:content-['›'] before:absolute before:left-0 before:text-accent-blue before:font-bold">Standardized lab workflows and practical examinations</li>
-              <li class="relative pl-3 before:content-['›'] before:absolute before:left-0 before:text-accent-blue before:font-bold">Coordinated real-time issue resolution during sessions</li>
-            </ul>
-            <span class="font-mono text-[0.72rem] font-semibold text-accent-green bg-accent-green/10 border border-accent-green/20 px-3 py-1 rounded-full inline-block">
-              ~30% readiness · ~25% troubleshooting
-            </span>
-          </div>
+          <!-- Entry 1: Coordinator Lab Assistant -->
+          <article class="py-10 sm:py-12 grid lg:grid-cols-[260px_1fr] gap-6 lg:gap-12 items-start">
+            <div class="space-y-1">
+              <div class="font-mono text-xs font-bold text-accent-blue uppercase tracking-wider">
+                Aug 2025 – Dec 2025
+              </div>
+              <div class="text-xs font-medium text-text-muted">
+                Laboratory Leadership
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-text-primary tracking-tight mb-1">
+                  Coordinator Laboratory Assistant — Neural Networks Course
+                </h3>
+                <div class="text-sm font-semibold text-accent-blue">
+                  Universitas Brawijaya
+                </div>
+              </div>
+              <div class="font-mono text-xs text-text-muted font-medium bg-bg-secondary/80 px-3 py-1.5 rounded-md inline-block border border-border-subtle/50">
+                Scope: 14 Laboratory Assistants · 7 Classes
+              </div>
+              <ul class="text-sm text-text-secondary space-y-2 leading-relaxed">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
+                  <span>Coordinated 14 laboratory assistants across 7 classes to deliver standardized practical instruction.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
+                  <span>Standardized laboratory workflows, grading rubrics, and practical examination criteria.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
+                  <span>Managed real-time issue resolution and technical support during hands-on lab sessions.</span>
+                </li>
+              </ul>
+              <div class="pt-2">
+                <span class="font-mono text-xs font-semibold text-accent-green bg-accent-green/10 border border-accent-green/20 px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5">
+                  <span>✦ Impact:</span> ~30% readiness improvement · ~25% troubleshooting reduction
+                </span>
+              </div>
+            </div>
+          </article>
 
-          <div class="relative pt-6 lg:pt-10">
-            <div class="absolute lg:top-2 left-0 lg:left-0 w-3.5 h-3.5 rounded-full bg-bg-primary border-2 border-accent-blue z-10"></div>
-            <div class="font-mono text-xs text-text-muted font-medium mb-2">February 2025 – June 2025</div>
-            <h3 class="font-display text-base font-semibold text-text-primary mb-1">Researcher — Laboratory Enhanced Learning Internship</h3>
-            <div class="text-xs font-semibold text-accent-blue mb-3">Universitas Brawijaya</div>
-            <ul class="text-xs text-text-secondary space-y-1.5 mb-4">
-              <li class="relative pl-3 before:content-['›'] before:absolute before:left-0 before:text-accent-blue before:font-bold">Pseudo-labeling of prefrontal cortex EEG signals</li>
-              <li class="relative pl-3 before:content-['›'] before:absolute before:left-0 before:text-accent-blue before:font-bold">Applied K-Means, GMM, SVM, Decision Tree, KNN</li>
-            </ul>
-            <span class="font-mono text-[0.72rem] font-semibold text-accent-green bg-accent-green/10 border border-accent-green/20 px-3 py-1 rounded-full inline-block">
-              97.18% with K-Means + SVM
-            </span>
-          </div>
+          <!-- Entry 2: AI Researcher -->
+          <article class="py-10 sm:py-12 grid lg:grid-cols-[260px_1fr] gap-6 lg:gap-12 items-start">
+            <div class="space-y-1">
+              <div class="font-mono text-xs font-bold text-accent-blue uppercase tracking-wider">
+                Feb 2025 – Jun 2025
+              </div>
+              <div class="text-xs font-medium text-text-muted">
+                AI Research Internship
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-text-primary tracking-tight mb-1">
+                  Researcher — Laboratory Enhanced Learning Internship
+                </h3>
+                <div class="text-sm font-semibold text-accent-blue">
+                  Universitas Brawijaya
+                </div>
+              </div>
+              <div class="font-mono text-xs text-text-muted font-medium bg-bg-secondary/80 px-3 py-1.5 rounded-md inline-block border border-border-subtle/50">
+                Scope: Prefrontal Cortex EEG Signals · Multi-subject Analysis
+              </div>
+              <ul class="text-sm text-text-secondary space-y-2 leading-relaxed">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
+                  <span>Formulated pseudo-labeling methodology for prefrontal cortex EEG signal representations.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
+                  <span>Evaluated unsupervised-to-supervised learning pipelines using K-Means, GMM, SVM, Decision Trees, and KNN.</span>
+                </li>
+              </ul>
+              <div class="pt-2">
+                <span class="font-mono text-xs font-semibold text-accent-green bg-accent-green/10 border border-accent-green/20 px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5">
+                  <span>✦ Benchmark:</span> 97.18% Accuracy achieved via K-Means + SVM Pipeline
+                </span>
+              </div>
+            </div>
+          </article>
 
-          <div class="relative pt-6 lg:pt-10">
-            <div class="absolute lg:top-2 left-0 lg:left-0 w-3.5 h-3.5 rounded-full bg-bg-primary border-2 border-accent-blue z-10"></div>
-            <div class="font-mono text-xs text-text-muted font-medium mb-2">February 2025 – June 2025</div>
-            <h3 class="font-display text-base font-semibold text-text-primary mb-1">Laboratory Assistant — Advanced AI Course</h3>
-            <div class="text-xs font-semibold text-accent-blue mb-3">Universitas Brawijaya</div>
-            <ul class="text-xs text-text-secondary space-y-1.5 mb-4">
-              <li class="relative pl-3 before:content-['›'] before:absolute before:left-0 before:text-accent-blue before:font-bold">Prepared datasets and Python demonstrations for 39 practicians</li>
-              <li class="relative pl-3 before:content-['›'] before:absolute before:left-0 before:text-accent-blue before:font-bold">Maintained reproducible notebooks and benchmarked ML models</li>
-            </ul>
-            <span class="font-mono text-[0.72rem] font-semibold text-accent-green bg-accent-green/10 border border-accent-green/20 px-3 py-1 rounded-full inline-block">
-              ~30% troubleshooting reduction
-            </span>
-          </div>
+          <!-- Entry 3: Advanced AI Lab Assistant -->
+          <article class="py-10 sm:py-12 grid lg:grid-cols-[260px_1fr] gap-6 lg:gap-12 items-start">
+            <div class="space-y-1">
+              <div class="font-mono text-xs font-bold text-accent-blue uppercase tracking-wider">
+                Feb 2025 – Jun 2025
+              </div>
+              <div class="text-xs font-medium text-text-muted">
+                Technical Instruction
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-text-primary tracking-tight mb-1">
+                  Laboratory Assistant — Advanced AI Course
+                </h3>
+                <div class="text-sm font-semibold text-accent-blue">
+                  Universitas Brawijaya
+                </div>
+              </div>
+              <div class="font-mono text-xs text-text-muted font-medium bg-bg-secondary/80 px-3 py-1.5 rounded-md inline-block border border-border-subtle/50">
+                Scope: 39 Practicians · Machine Learning Benchmarks
+              </div>
+              <ul class="text-sm text-text-secondary space-y-2 leading-relaxed">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
+                  <span>Prepared datasets and Python code demonstrations for 39 practicing students.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
+                  <span>Maintained reproducible Jupyter notebooks and benchmarked machine learning model performance.</span>
+                </li>
+              </ul>
+              <div class="pt-2">
+                <span class="font-mono text-xs font-semibold text-accent-green bg-accent-green/10 border border-accent-green/20 px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5">
+                  <span>✦ Outcome:</span> ~30% reduction in student troubleshooting queries
+                </span>
+              </div>
+            </div>
+          </article>
 
-          <div class="relative pt-6 lg:pt-10">
-            <div class="absolute lg:top-2 left-0 lg:left-0 w-3.5 h-3.5 rounded-full bg-bg-primary border-2 border-accent-blue z-10"></div>
-            <div class="font-mono text-xs text-text-muted font-medium mb-2">May 2024 – October 2024</div>
-            <h3 class="font-display text-base font-semibold text-text-primary mb-1">Module Maker</h3>
-            <div class="text-xs font-semibold text-accent-blue mb-3">BKPSDM Kabupaten Malang</div>
-            <ul class="text-xs text-text-secondary space-y-1.5 mb-4">
-              <li class="relative pl-3 before:content-['›'] before:absolute before:left-0 before:text-accent-blue before:font-bold">Developed 10+ application modules with structured user guides</li>
-              <li class="relative pl-3 before:content-['›'] before:absolute before:left-0 before:text-accent-blue before:font-bold">Delivered training sessions and application simulations</li>
-            </ul>
-            <span class="font-mono text-[0.72rem] font-semibold text-accent-green bg-accent-green/10 border border-accent-green/20 px-3 py-1 rounded-full inline-block">
-              20+ employees trained · 95% completion
-            </span>
-          </div>
+          <!-- Entry 4: Module Maker -->
+          <article class="py-10 sm:py-12 grid lg:grid-cols-[260px_1fr] gap-6 lg:gap-12 items-start">
+            <div class="space-y-1">
+              <div class="font-mono text-xs font-bold text-accent-blue uppercase tracking-wider">
+                May 2024 – Oct 2024
+              </div>
+              <div class="text-xs font-medium text-text-muted">
+                Training &amp; Development
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-text-primary tracking-tight mb-1">
+                  Module Maker
+                </h3>
+                <div class="text-sm font-semibold text-accent-blue">
+                  BKPSDM Kabupaten Malang
+                </div>
+              </div>
+              <div class="font-mono text-xs text-text-muted font-medium bg-bg-secondary/80 px-3 py-1.5 rounded-md inline-block border border-border-subtle/50">
+                Scope: 10+ Modules · 20+ Staff Trained
+              </div>
+              <ul class="text-sm text-text-secondary space-y-2 leading-relaxed">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
+                  <span>Developed 10+ application modules with structured user guides and documentation.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
+                  <span>Delivered hands-on training sessions and application simulations for government staff.</span>
+                </li>
+              </ul>
+              <div class="pt-2">
+                <span class="font-mono text-xs font-semibold text-accent-green bg-accent-green/10 border border-accent-green/20 px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5">
+                  <span>✦ Impact:</span> 20+ employees trained · 95% module completion rate
+                </span>
+              </div>
+            </div>
+          </article>
 
         </div>
+
       </div>
     </section>
 
