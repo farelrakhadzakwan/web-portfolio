@@ -3,11 +3,11 @@ export function initExperience() {
 
   experienceCards.forEach(card => {
     const btn = card.querySelector('.exp-toggle-btn');
-    const details = card.querySelector('.exp-details');
+    const bullets = card.querySelector('.exp-bullets');
     const chevron = card.querySelector('.chevron-icon');
     const toggleText = card.querySelector('.toggle-text');
 
-    if (!details) return;
+    if (!bullets) return;
 
     function toggleCard(e) {
       // Avoid double toggling if clicked directly on a link inside card
@@ -16,16 +16,16 @@ export function initExperience() {
       const isExpanded = btn.getAttribute('aria-expanded') === 'true';
 
       if (isExpanded) {
-        // Minimize (Hide bullet points smoothly)
-        details.classList.remove('grid-rows-[1fr]', 'opacity-100');
-        details.classList.add('grid-rows-[0fr]', 'opacity-0');
+        // Minimize: Bullet points collapse to 0 height, Impact pill slides up under Scope tag
+        bullets.classList.remove('grid-rows-[1fr]', 'opacity-100');
+        bullets.classList.add('grid-rows-[0fr]', 'opacity-0');
         btn.setAttribute('aria-expanded', 'false');
         if (chevron) chevron.classList.remove('rotate-180');
         if (toggleText) toggleText.textContent = 'Show Details';
       } else {
-        // Expand (Show bullet points smoothly)
-        details.classList.remove('grid-rows-[0fr]', 'opacity-0');
-        details.classList.add('grid-rows-[1fr]', 'opacity-100');
+        // Expand: Bullet points expand, pushing Impact pill below bullet points
+        bullets.classList.remove('grid-rows-[0fr]', 'opacity-0');
+        bullets.classList.add('grid-rows-[1fr]', 'opacity-100');
         btn.setAttribute('aria-expanded', 'true');
         if (chevron) chevron.classList.add('rotate-180');
         if (toggleText) toggleText.textContent = 'Hide Details';
