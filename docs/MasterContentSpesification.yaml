@@ -1476,16 +1476,17 @@ certifications:
 
   alibaba_cloud:
 
-    - "Alibaba Cloud Platform for AI"
-    - "Dive Into Generative AI"
-    - "Fundamentals of RAG and Agents"
-    - "Getting to Know Generative AI and its Concepts"
-    - "GPU-accelerated ECS"
-    - "The Inner Workings of Generative AI"
-    - "The Large World of Language Models"
-    - "Model Studio Fundamentals"
-    - "Prompt Engineering Fundamentals"
-    - "Using Generative AI Ethically & Responsibly"
+    courses:
+      - "Alibaba Cloud Platform for AI"
+      - "Dive Into Generative AI"
+      - "Fundamentals of RAG and Agents"
+      - "Getting to Know Generative AI and its Concepts"
+      - "GPU-accelerated ECS"
+      - "The Inner Workings of Generative AI"
+      - "The Large World of Language Models"
+      - "Model Studio Fundamentals"
+      - "Prompt Engineering Fundamentals"
+      - "Using Generative AI Ethically & Responsibly"
 
     date:
       "October 2025"
@@ -1518,8 +1519,9 @@ certifications:
 
   dicoding:
 
-    - "Belajar Dasar Visualisasi Data"
-    - "Memulai Pemrograman dengan Python"
+    courses:
+      - "Belajar Dasar Visualisasi Data"
+      - "Memulai Pemrograman dengan Python"
 
     date:
       "October 2024"
