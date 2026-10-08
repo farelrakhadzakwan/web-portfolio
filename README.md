@@ -11,6 +11,7 @@ Live at: [farelrakhadzakwan.my.id](https://farelrakhadzakwan.my.id)
 ### 🎨 Human-Crafted Visual Excellence
 - **Dual Theme (Dark & Light Mode)**: Fully bespoke color system (Midnight Navy & Slate for Dark Mode, Crisp Porcelain & Slate for Light Mode) designed to eliminate generic AI-generated template clichés.
 - **Circular Reveal Theme Animation**: Uses the cutting-edge **View Transitions API** to create a circular radial wipe radiating directly from the theme toggle button.
+- **Limitless Infinity Identity (`∞`)**: Custom mathematical lemniscate favicon harmonized with the portfolio's signature electric cyan-to-indigo gradient, symbolizing lifelong career progression and infinite AI research possibilities. 100% transparent vector and raster pipeline (SVG, ICO, 32px, 180px, 192px) with zero halo artifacts.
 - **Comprehensive AI Focus**: Highlights core AI engineering and research disciplines including **Machine Learning**, **Deep Learning**, **Computer Vision**, **NLP**, **LLM**, **RAG**, **Generative AI**, and **EEG Signal Processing**.
 - **Interactive Methodology Pipeline**: 10-stage sequential research pipeline with real-time stage inspection and research evidence telemetry.
 - **Dynamic Projects Showcase**: Category filtering (*All*, *Research & Thesis*, *Computer Vision*, *NLP & LLM*, *IoT & Systems*) with dedicated thesis spotlight and empirical metric tags (e.g., *87.5% Accuracy*, *p < 0.05*).

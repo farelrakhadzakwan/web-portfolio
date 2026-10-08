@@ -1,7 +1,7 @@
 {
   "name": "webportfolio",
-  "version": "1.0.0",
-  "description": "Personal portfolio website for **Farel Rakha Dzakwan** (AI Engineer & AI Researcher). Built with high visual aesthetic standards (Cyber-Minimalism Dark Mode, Glassmorphism, Monospace Typography, and Interactive Micro-interactions).",
+  "version": "2.1.0",
+  "description": "Personal portfolio website for Farel Rakha Dzakwan (AI Engineer & AI Researcher). Built with high aesthetic standards, dual Dark/Light mode with View Transitions API, and high-performance React architecture.",
   "main": "script.js",
   "type": "module",
   "scripts": {
