@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    :root {
+      --bg: #090d16;
+      --border: rgba(255, 255, 255, 0.16);
+      --letter: #ffffff;
+      --dot: #38bdf8;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --border: #cbd5e1;
+        --letter: #090d16;
+        --dot: #2563eb;
+      }
+    }
+    .card-bg {
+      fill: var(--bg);
+      stroke: var(--border);
+      stroke-width: 1.5;
+    }
+    .letter-r {
+      fill: var(--letter);
+    }
+    .dot-accent {
+      fill: var(--dot);
+    }
+  </style>
+  <rect class="card-bg" x="3" y="3" width="58" height="58" rx="16" />
+  <path class="letter-r" d="M17 15 H33 C40.18 15 45 19.4 45 25.5 C45 30.8 41.2 34.6 35.5 35.5 L44.5 49 H36 L27.8 36.5 H25 V49 H17 V15 Z M25 22 V30.5 H32.5 C36 30.5 37.8 28.8 37.8 26.2 C37.8 23.6 36 22 32.5 22 H25 Z" />
+  <circle class="dot-accent" cx="51" cy="45.5" r="4" />
+</svg>
