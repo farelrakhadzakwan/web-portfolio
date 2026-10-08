@@ -1,32 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <style>
-    :root {
-      --bg: #090d16;
-      --border: rgba(255, 255, 255, 0.16);
-      --letter: #ffffff;
-      --dot: #38bdf8;
-    }
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg: #ffffff;
-        --border: #cbd5e1;
-        --letter: #090d16;
-        --dot: #2563eb;
-      }
-    }
-    .card-bg {
-      fill: var(--bg);
-      stroke: var(--border);
-      stroke-width: 1.5;
-    }
-    .letter-r {
-      fill: var(--letter);
-    }
-    .dot-accent {
-      fill: var(--dot);
-    }
-  </style>
-  <rect class="card-bg" x="3" y="3" width="58" height="58" rx="16" />
-  <path class="letter-r" d="M17 15 H33 C40.18 15 45 19.4 45 25.5 C45 30.8 41.2 34.6 35.5 35.5 L44.5 49 H36 L27.8 36.5 H25 V49 H17 V15 Z M25 22 V30.5 H32.5 C36 30.5 37.8 28.8 37.8 26.2 C37.8 23.6 36 22 32.5 22 H25 Z" />
-  <circle class="dot-accent" cx="51" cy="45.5" r="4" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background squircle: solid static theme -->
+  <rect x="3" y="3" width="58" height="58" rx="16" fill="#090D18" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1.5" />
+
+  <!-- Outer perimeter connections -->
+  <line x1="32" y1="16" x2="16" y2="45" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round" opacity="0.75" />
+  <line x1="32" y1="16" x2="48" y2="45" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round" opacity="0.75" />
+  <line x1="16" y1="45" x2="48" y2="45" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round" opacity="0.75" />
+
+  <!-- Center radiating synapses -->
+  <line x1="32" y1="16" x2="32" y2="32" stroke="url(#lineGrad)" stroke-width="3.5" stroke-linecap="round" />
+  <line x1="16" y1="45" x2="32" y2="32" stroke="url(#lineGrad)" stroke-width="3.5" stroke-linecap="round" />
+  <line x1="48" y1="45" x2="32" y2="32" stroke="url(#lineGrad)" stroke-width="3.5" stroke-linecap="round" />
+
+  <!-- Outer Neural Nodes (Cyan) -->
+  <circle cx="32" cy="16" r="6" fill="#38BDF8" />
+  <circle cx="32" cy="16" r="2.5" fill="#FFFFFF" />
+
+  <circle cx="16" cy="45" r="6" fill="#38BDF8" />
+  <circle cx="16" cy="45" r="2.5" fill="#FFFFFF" />
+
+  <circle cx="48" cy="45" r="6" fill="#38BDF8" />
+  <circle cx="48" cy="45" r="2.5" fill="#FFFFFF" />
+
+  <!-- Center Core Node (Purple/Indigo Core) -->
+  <circle cx="32" cy="32" r="7" fill="url(#coreGlow)" />
+  <circle cx="32" cy="32" r="3" fill="#FFFFFF" />
 </svg>

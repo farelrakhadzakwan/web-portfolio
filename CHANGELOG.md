@@ -12,7 +12,7 @@ All notable changes, visual updates, and performance optimizations for Farel Rak
   - **Dark Mode**: Deep midnight navy background (`#070d18` / `#0b1325`), subtle slate borders (`rgba(255, 255, 255, 0.08)`), and sophisticated royal blue / indigo accents (`#2563eb`, `#3b82f6`).
   - **Light Mode**: Clean porcelain background (`#f8fafc` / `#ffffff`), crisp borders (`#e2e8f0`), and high-contrast typography (`#0f172a`).
 - **Circular Reveal Theme Transition**: Implemented the modern **View Transitions API** with circular clipping animations (`::view-transition-old` and `::view-transition-new`) centered at the toggle switch location for a seamless transition between Light and Dark modes.
-- **Adaptive SVG Favicon & Brand Monogram**: Created a high-precision `R •` monogram favicon in SVG format that dynamically adapts its color palette to the browser's tab theme (`@media (prefers-color-scheme: light / dark)`), alongside crisp multi-resolution PNG and ICO fallbacks (16px, 32px, 180px, 192px).
+- **Static Neural Network Nodes Favicon**: Replaced typography-based monogram with a clean, static Neural Network Nodes symbol (symmetrical deep learning triad with glowing synaptic connections and midnight squircle container) providing high contrast on all browser tab backgrounds, alongside crisp multi-resolution PNG and ICO fallbacks (16px, 32px, 180px, 192px).
 - **Hero Section Overhaul**:
   - Embedded high-resolution formal portrait with ambient radial lighting.
   - Added academic & award badges: **Universitas Brawijaya (GPA 3.73 / 4.00)** and **1st Place Winner IEEE FEST 2025**.
