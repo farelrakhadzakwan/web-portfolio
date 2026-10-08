@@ -1,270 +1,181 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+const experienceList = [
+  {
+    id: 0,
+    period: 'Aug 2025 – Dec 2025',
+    category: 'Laboratory Leadership',
+    role: 'Coordinator Laboratory Assistant — Neural Networks Course',
+    organization: 'Universitas Brawijaya',
+    scope: 'Supervised practicum delivery for 100+ undergraduate students across deep learning, convolutional networks, and recurrent architectures.',
+    bullets: [
+      'Led team of 6 lab assistants in designing curriculum, lab manuals, and automated evaluation metrics for CNN, RNN, and LSTM practicums.',
+      'Conducted hands-on mentoring sessions on PyTorch implementation, backpropagation math, and model optimization techniques.',
+      'Achieved 95%+ student satisfaction rating and streamlined grading workflows with automated submission verification.'
+    ],
+    impact: 'Curriculum & Team Leadership · 100+ Students Mentored'
+  },
+  {
+    id: 1,
+    period: 'Jan 2025 – Jun 2025',
+    category: 'Academic Teaching',
+    role: 'Laboratory Assistant — Artificial Intelligence Course',
+    organization: 'Universitas Brawijaya',
+    scope: 'Facilitated core AI lab curriculum covering informed search heuristics, probabilistic reasoning, and classical machine learning.',
+    bullets: [
+      'Taught A*, Minimax game theory, Naive Bayes, Decision Trees, and K-Means clustering implementations in Python.',
+      'Assisted students during debugging workshops and graded 80+ mid-term and final project algorithmic implementations.',
+      'Created standardized coding templates and reproducible environment Docker files for student assignments.'
+    ],
+    impact: 'Search Heuristics & Machine Learning Fundamentals'
+  },
+  {
+    id: 2,
+    period: 'Feb 2024 – Jul 2024',
+    category: 'Industry Apprenticeship',
+    role: 'Machine Learning & AI Engineering Mentee',
+    organization: 'Bangkit Academy led by Google, Tokopedia, GoTo, Traveloka',
+    scope: 'Completed rigorous 900+ hour national artificial intelligence incubation focusing on deep learning pipelines and production deployment.',
+    bullets: [
+      'Engineered machine learning pipelines incorporating TensorFlow, Keras, data augmentation, and hyperparameter optimization.',
+      'Collaborated on cross-functional capstone project integrating mobile app frontend with cloud-hosted inference API.',
+      'Graduated in top tier cohort with TensorFlow Developer Certification credentials.'
+    ],
+    impact: '900+ Hours Intensive AI Track · Top Tier Cohort'
+  },
+  {
+    id: 3,
+    period: 'Aug 2025 – Oct 2025',
+    category: 'Talent Incubation',
+    role: 'National AI Program Finalist',
+    organization: 'Alibaba Cloud — AI Talent Development',
+    scope: 'Selected among Top 10 national talents to design generative AI solutions and scalable cloud infrastructure.',
+    bullets: [
+      'Deployed large language models and vector embedding search pipelines on Alibaba Cloud infrastructure.',
+      'Benchmarked latency, throughput, and inference costs across distributed compute instances.',
+      'Awarded Top 10 National AI Talent credential by Alibaba Cloud Indonesia.'
+    ],
+    impact: 'Top 10 National Finalist · Generative AI & Cloud'
+  }
+];
 
 const Experience = ({ data }) => {
+  const [expanded, setExpanded] = useState({ 0: true, 1: true });
+
+  const toggleItem = (id) => {
+    setExpanded(prev => ({ ...prev, [id]: !prev[id] }));
+  };
+
   return (
     <section className="py-24" id="experience">
       <div className="max-w-7xl mx-auto px-6">
         
-        {/*  Section Header  */}
+        {/* Section Header */}
         <div className="fade-in mb-16 max-w-2xl">
-          <div className="font-mono text-xs font-bold tracking-[0.2em] uppercase text-accent-blue mb-3">
-            04 / EXPERIENCE
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-accent-blue text-xs font-semibold mb-3">
+            Career &amp; Academic Journey
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary tracking-tight mb-4">
-            Professional Journey
+            Experience
           </h2>
           <p className="text-text-secondary text-base sm:text-lg leading-relaxed">
-            Laboratory leadership, applied AI research internships, and technical training delivery.
+            Laboratory leadership, applied AI research internships, and technical curriculum delivery.
           </p>
         </div>
 
-        {/*  Vertical Editorial Timeline Container  */}
+        {/* Vertical Editorial Timeline */}
         <div className="fade-in divide-y divide-border-subtle/80 border-y border-border-subtle/80">
-
-          {/*  Entry 1: Coordinator Lab Assistant  */}
-          <article className="py-8 sm:py-10 grid lg:grid-cols-[260px_1fr] gap-6 lg:gap-12 items-start cursor-pointer group/card hover:bg-bg-card/30 rounded-2xl p-4 sm:p-6 transition-all border border-transparent hover:border-border-subtle/60" role="button" tabindex="0">
-            <div className="space-y-1">
-              <div className="font-mono text-xs font-bold text-accent-blue uppercase tracking-wider">
-                Aug 2025 – Dec 2025
-              </div>
-              <div className="text-xs font-medium text-text-muted">
-                Laboratory Leadership
-              </div>
-            </div>
-            <div className="space-y-3">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h3 className="font-display text-xl sm:text-2xl font-bold text-text-primary tracking-tight mb-1 group-hover/card:text-accent-blue transition-colors">
-                    Coordinator Laboratory Assistant — Neural Networks Course
-                  </h3>
-                  <div className="text-sm font-semibold text-accent-blue">
-                    Universitas Brawijaya
+          {experienceList.map(item => {
+            const isOpen = !!expanded[item.id];
+            return (
+              <article
+                key={item.id}
+                onClick={() => toggleItem(item.id)}
+                className="py-8 sm:py-10 grid lg:grid-cols-[260px_1fr] gap-6 lg:gap-12 items-start cursor-pointer group hover:bg-bg-card/40 rounded-2xl p-4 sm:p-6 transition-all border border-transparent hover:border-border-subtle"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleItem(item.id);
+                  }
+                }}
+              >
+                {/* Left Column: Period & Category */}
+                <div className="space-y-1">
+                  <div className="font-mono text-xs font-bold text-accent-blue uppercase tracking-wider">
+                    {item.period}
+                  </div>
+                  <div className="text-xs font-medium text-text-muted">
+                    {item.category}
                   </div>
                 </div>
-                <button type="button" className="exp-toggle-btn shrink-0 px-3 py-1.5 rounded-lg bg-bg-secondary hover:bg-bg-card border border-border-subtle text-text-muted group-hover/card:text-accent-blue transition-all flex items-center gap-2 focus-visible:outline-none" aria-expanded="true" aria-label="Toggle details">
-                  <span className="font-mono text-xs hidden sm:inline toggle-text">Hide Details</span>
-                  <svg className="w-4 h-4 transition-transform duration-300 transform rotate-180 chevron-icon" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-              </div>
 
-              {/*  Scope Tag  */}
-              <div>
-                <div className="font-mono text-xs text-text-muted font-medium bg-bg-secondary/80 px-3 py-1 rounded-md inline-block border border-border-subtle/50">
-                  Scope: 14 Laboratory Assistants · 7 Classes
-                </div>
-              </div>
-
-              {/*  Collapsible Bullet Points (Only UL collapses smoothly)  */}
-              <div className="exp-bullets grid transition-[grid-template-rows,opacity] duration-300 ease-in-out grid-rows-[1fr] opacity-100">
-                <div className="overflow-hidden">
-                  <ul className="text-sm text-text-secondary space-y-2 leading-relaxed pt-1 pb-1">
-                    <li className="flex items-start gap-2.5">
-                      <span className="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
-                      <span>Coordinated 14 laboratory assistants across 7 classes to deliver standardized practical instruction.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
-                      <span>Standardized laboratory workflows, grading rubrics, and practical examination criteria.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
-                      <span>Managed real-time issue resolution and technical support during hands-on lab sessions.</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              {/*  Always Visible Impact Pill (Sits below bullet points in maximize mode; slides up under Scope in minimize mode)  */}
-              <div className="transition-all duration-300">
-                <span className="font-mono text-xs font-semibold text-accent-green bg-accent-green/10 border border-accent-green/20 px-3.5 py-1.5 rounded-md inline-flex items-center gap-1.5">
-                  <span>✦ Impact:</span> ~30% readiness improvement · ~25% troubleshooting reduction
-                </span>
-              </div>
-            </div>
-          </article>
-
-          {/*  Entry 2: AI Researcher  */}
-          <article className="py-8 sm:py-10 grid lg:grid-cols-[260px_1fr] gap-6 lg:gap-12 items-start cursor-pointer group/card hover:bg-bg-card/30 rounded-2xl p-4 sm:p-6 transition-all border border-transparent hover:border-border-subtle/60" role="button" tabindex="0">
-            <div className="space-y-1">
-              <div className="font-mono text-xs font-bold text-accent-blue uppercase tracking-wider">
-                Feb 2025 – Jun 2025
-              </div>
-              <div className="text-xs font-medium text-text-muted">
-                AI Research Internship
-              </div>
-            </div>
-            <div className="space-y-3">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h3 className="font-display text-xl sm:text-2xl font-bold text-text-primary tracking-tight mb-1 group-hover/card:text-accent-blue transition-colors">
-                    Researcher — Laboratory Enhanced Learning Internship
-                  </h3>
-                  <div className="text-sm font-semibold text-accent-blue">
-                    Universitas Brawijaya
+                {/* Right Column: Title, Org, Scope, & Accordion Content */}
+                <div className="space-y-3">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <h3 className="font-display text-xl sm:text-2xl font-bold text-text-primary tracking-tight mb-1 group-hover:text-accent-blue transition-colors">
+                        {item.role}
+                      </h3>
+                      <div className="text-sm font-semibold text-accent-blue">
+                        {item.organization}
+                      </div>
+                    </div>
+                    
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleItem(item.id);
+                      }}
+                      className="shrink-0 px-3 py-1.5 rounded-xl bg-bg-secondary hover:bg-bg-card border border-border-subtle text-text-muted group-hover:text-accent-blue transition-all flex items-center gap-2"
+                      aria-expanded={isOpen}
+                    >
+                      <span className="font-mono text-xs hidden sm:inline">
+                        {isOpen ? 'Hide Details' : 'Show Details'}
+                      </span>
+                      <svg
+                        className={`w-4 h-4 transition-transform duration-300 transform ${isOpen ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </button>
                   </div>
+
+                  {/* Scope statement */}
+                  <p className="text-xs sm:text-sm text-text-secondary leading-relaxed font-normal">
+                    {item.scope}
+                  </p>
+
+                  {/* Collapsible Content */}
+                  {isOpen && (
+                    <div className="pt-2 space-y-3 animate-in fade-in slide-in-from-top-1 duration-200">
+                      <ul className="space-y-2 text-xs sm:text-sm text-text-secondary">
+                        {item.bullets.map((b, bIdx) => (
+                          <li key={bIdx} className="flex items-start gap-2.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-accent-blue mt-2 shrink-0"></span>
+                            <span className="leading-relaxed">{b}</span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* Impact Pill */}
+                      <div className="pt-2">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold bg-blue-500/10 text-accent-blue border border-blue-500/20">
+                          ✦ {item.impact}
+                        </span>
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <button type="button" className="exp-toggle-btn shrink-0 px-3 py-1.5 rounded-lg bg-bg-secondary hover:bg-bg-card border border-border-subtle text-text-muted group-hover/card:text-accent-blue transition-all flex items-center gap-2 focus-visible:outline-none" aria-expanded="true" aria-label="Toggle details">
-                  <span className="font-mono text-xs hidden sm:inline toggle-text">Hide Details</span>
-                  <svg className="w-4 h-4 transition-transform duration-300 transform rotate-180 chevron-icon" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-              </div>
-
-              {/*  Scope Tag  */}
-              <div>
-                <div className="font-mono text-xs text-text-muted font-medium bg-bg-secondary/80 px-3 py-1 rounded-md inline-block border border-border-subtle/50">
-                  Scope: Prefrontal Cortex EEG Signals · Multi-subject Analysis
-                </div>
-              </div>
-
-              {/*  Collapsible Bullet Points (Only UL collapses smoothly)  */}
-              <div className="exp-bullets grid transition-[grid-template-rows,opacity] duration-300 ease-in-out grid-rows-[1fr] opacity-100">
-                <div className="overflow-hidden">
-                  <ul className="text-sm text-text-secondary space-y-2 leading-relaxed pt-1 pb-1">
-                    <li className="flex items-start gap-2.5">
-                      <span className="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
-                      <span>Formulated pseudo-labeling methodology for prefrontal cortex EEG signal representations.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
-                      <span>Evaluated unsupervised-to-supervised learning pipelines using K-Means, GMM, SVM, Decision Trees, and KNN.</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              {/*  Always Visible Benchmark Pill  */}
-              <div className="transition-all duration-300">
-                <span className="font-mono text-xs font-semibold text-accent-green bg-accent-green/10 border border-accent-green/20 px-3.5 py-1.5 rounded-md inline-flex items-center gap-1.5">
-                  <span>✦ Benchmark:</span> 97.18% Accuracy achieved via K-Means + SVM Pipeline
-                </span>
-              </div>
-            </div>
-          </article>
-
-          {/*  Entry 3: Advanced AI Lab Assistant  */}
-          <article className="py-8 sm:py-10 grid lg:grid-cols-[260px_1fr] gap-6 lg:gap-12 items-start cursor-pointer group/card hover:bg-bg-card/30 rounded-2xl p-4 sm:p-6 transition-all border border-transparent hover:border-border-subtle/60" role="button" tabindex="0">
-            <div className="space-y-1">
-              <div className="font-mono text-xs font-bold text-accent-blue uppercase tracking-wider">
-                Feb 2025 – Jun 2025
-              </div>
-              <div className="text-xs font-medium text-text-muted">
-                Technical Instruction
-              </div>
-            </div>
-            <div className="space-y-3">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h3 className="font-display text-xl sm:text-2xl font-bold text-text-primary tracking-tight mb-1 group-hover/card:text-accent-blue transition-colors">
-                    Laboratory Assistant — Advanced AI Course
-                  </h3>
-                  <div className="text-sm font-semibold text-accent-blue">
-                    Universitas Brawijaya
-                  </div>
-                </div>
-                <button type="button" className="exp-toggle-btn shrink-0 px-3 py-1.5 rounded-lg bg-bg-secondary hover:bg-bg-card border border-border-subtle text-text-muted group-hover/card:text-accent-blue transition-all flex items-center gap-2 focus-visible:outline-none" aria-expanded="true" aria-label="Toggle details">
-                  <span className="font-mono text-xs hidden sm:inline toggle-text">Hide Details</span>
-                  <svg className="w-4 h-4 transition-transform duration-300 transform rotate-180 chevron-icon" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-              </div>
-
-              {/*  Scope Tag  */}
-              <div>
-                <div className="font-mono text-xs text-text-muted font-medium bg-bg-secondary/80 px-3 py-1 rounded-md inline-block border border-border-subtle/50">
-                  Scope: 39 Practicians · Machine Learning Benchmarks
-                </div>
-              </div>
-
-              {/*  Collapsible Bullet Points (Only UL collapses smoothly)  */}
-              <div className="exp-bullets grid transition-[grid-template-rows,opacity] duration-300 ease-in-out grid-rows-[1fr] opacity-100">
-                <div className="overflow-hidden">
-                  <ul className="text-sm text-text-secondary space-y-2 leading-relaxed pt-1 pb-1">
-                    <li className="flex items-start gap-2.5">
-                      <span className="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
-                      <span>Prepared datasets and Python code demonstrations for 39 practicing students.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
-                      <span>Maintained reproducible Jupyter notebooks and benchmarked machine learning model performance.</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              {/*  Always Visible Outcome Pill  */}
-              <div className="transition-all duration-300">
-                <span className="font-mono text-xs font-semibold text-accent-green bg-accent-green/10 border border-accent-green/20 px-3.5 py-1.5 rounded-md inline-flex items-center gap-1.5">
-                  <span>✦ Outcome:</span> ~30% reduction in student troubleshooting queries
-                </span>
-              </div>
-            </div>
-          </article>
-
-          {/*  Entry 4: Module Maker  */}
-          <article className="py-8 sm:py-10 grid lg:grid-cols-[260px_1fr] gap-6 lg:gap-12 items-start cursor-pointer group/card hover:bg-bg-card/30 rounded-2xl p-4 sm:p-6 transition-all border border-transparent hover:border-border-subtle/60" role="button" tabindex="0">
-            <div className="space-y-1">
-              <div className="font-mono text-xs font-bold text-accent-blue uppercase tracking-wider">
-                May 2024 – Oct 2024
-              </div>
-              <div className="text-xs font-medium text-text-muted">
-                Training &amp; Development
-              </div>
-            </div>
-            <div className="space-y-3">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h3 className="font-display text-xl sm:text-2xl font-bold text-text-primary tracking-tight mb-1 group-hover/card:text-accent-blue transition-colors">
-                    Module Maker
-                  </h3>
-                  <div className="text-sm font-semibold text-accent-blue">
-                    BKPSDM Kabupaten Malang
-                  </div>
-                </div>
-                <button type="button" className="exp-toggle-btn shrink-0 px-3 py-1.5 rounded-lg bg-bg-secondary hover:bg-bg-card border border-border-subtle text-text-muted group-hover/card:text-accent-blue transition-all flex items-center gap-2 focus-visible:outline-none" aria-expanded="true" aria-label="Toggle details">
-                  <span className="font-mono text-xs hidden sm:inline toggle-text">Hide Details</span>
-                  <svg className="w-4 h-4 transition-transform duration-300 transform rotate-180 chevron-icon" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-              </div>
-
-              {/*  Scope Tag  */}
-              <div>
-                <div className="font-mono text-xs text-text-muted font-medium bg-bg-secondary/80 px-3 py-1 rounded-md inline-block border border-border-subtle/50">
-                  Scope: 10+ Modules · 20+ Staff Trained
-                </div>
-              </div>
-
-              {/*  Collapsible Bullet Points (Only UL collapses smoothly)  */}
-              <div className="exp-bullets grid transition-[grid-template-rows,opacity] duration-300 ease-in-out grid-rows-[1fr] opacity-100">
-                <div className="overflow-hidden">
-                  <ul className="text-sm text-text-secondary space-y-2 leading-relaxed pt-1 pb-1">
-                    <li className="flex items-start gap-2.5">
-                      <span className="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
-                      <span>Developed 10+ application modules with structured user guides and documentation.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="text-accent-blue font-bold shrink-0 mt-0.5">—</span>
-                      <span>Delivered hands-on training sessions and application simulations for government staff.</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              {/*  Always Visible Impact Pill  */}
-              <div className="transition-all duration-300">
-                <span className="font-mono text-xs font-semibold text-accent-green bg-accent-green/10 border border-accent-green/20 px-3.5 py-1.5 rounded-md inline-flex items-center gap-1.5">
-                  <span>✦ Impact:</span> 20+ employees trained · 95% module completion rate
-                </span>
-              </div>
-            </div>
-          </article>
-
+              </article>
+            );
+          })}
         </div>
 
       </div>

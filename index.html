@@ -9,8 +9,20 @@
     content="AI Engineer &amp; AI Researcher specializing in machine learning, computer vision, signal processing, and applied AI research.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <meta name="theme-color" content="#0a0a0f">
+  <meta name="theme-color" content="#f8fafc">
+  <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
 
   <!-- Open Graph / SEO Metadata -->
   <meta property="og:title" content="Farel Rakha Dzakwan — AI Engineer &amp; AI Researcher">
@@ -28,7 +40,7 @@
     rel="stylesheet">
 </head>
 
-<body class="bg-bg-primary text-text-primary min-h-screen antialiased selection:bg-accent-blue/30 selection:text-white">
+<body class="bg-bg-primary text-text-primary min-h-screen antialiased selection:bg-accent-blue/20 selection:text-text-primary">
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

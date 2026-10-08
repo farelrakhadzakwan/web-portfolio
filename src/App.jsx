@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
-import * as yaml from 'js-yaml';
-import masterContentRaw from '../docs/MasterContentSpesification.yaml?raw';
+import React, { useEffect } from 'react';
+import portfolioData from './data/portfolioData.json';
 
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
@@ -15,67 +14,42 @@ import Achievements from './components/Achievements.jsx';
 import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 
-// Import vanilla JS scripts that initialize animations, etc.
-import { initNavigation } from './components/navigation.js';
-import { initMetrics } from './components/metrics.js';
-import { initPipeline } from './components/pipeline.js';
-import { initProjects } from './components/projects.js';
-import { initExperience } from './components/experience.js';
-import { initTiltAndGlow } from './components/tilt.js';
-import { initScramble } from './components/scramble.js';
-import { initEmailCopy } from './components/emailCopy.js';
-import { initLiveClock } from './components/clock.js';
-import { initScrollReveal } from './components/scrollReveal.js';
-
 function App() {
-  const [data, setData] = useState(null);
-
   useEffect(() => {
-    try {
-      const parsedData = yaml.load(masterContentRaw);
-      setData(parsedData);
-      console.log('YAML Data Loaded:', parsedData);
-    } catch (e) {
-      console.error('Error parsing YAML:', e);
-    }
+    // Lightweight IntersectionObserver for smooth scroll entrance
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+    );
+
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
   }, []);
-
-  useEffect(() => {
-    if (data) {
-      // Re-initialize vanilla javascript plugins after React renders
-      setTimeout(() => {
-        initNavigation();
-        initMetrics();
-        initPipeline();
-        initProjects();
-        initExperience();
-        initTiltAndGlow();
-        initScramble();
-        initEmailCopy();
-        initLiveClock();
-        initScrollReveal();
-      }, 100);
-    }
-  }, [data]);
-
-  if (!data) return <div className="min-h-screen flex items-center justify-center font-mono text-[#38bdf8] bg-[#0a0a0f]">system_boot... loading AI_Engineer_Profile...</div>;
 
   return (
     <>
-      <Navbar data={data} />
+      <Navbar data={portfolioData} />
       <main id="main-content">
-        <Hero data={data} />
-        <Metrics data={data} />
-        <About data={data} />
-        <Methodology data={data} />
-        <Projects data={data} />
-        <Experience data={data} />
-        <Organization data={data} />
-        <Skills data={data} />
-        <Achievements data={data} />
-        <Contact data={data} />
+        <Hero data={portfolioData} />
+        <Metrics data={portfolioData} />
+        <About data={portfolioData} />
+        <Methodology data={portfolioData} />
+        <Projects data={portfolioData} />
+        <Experience data={portfolioData} />
+        <Organization data={portfolioData} />
+        <Skills data={portfolioData} />
+        <Achievements data={portfolioData} />
+        <Contact data={portfolioData} />
       </main>
-      <Footer data={data} />
+      <Footer data={portfolioData} />
     </>
   );
 }

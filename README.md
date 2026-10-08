@@ -1,30 +1,27 @@
 # 🌌 AI Engineer & AI Researcher Portfolio — Farel Rakha Dzakwan
 
-Personal portfolio website for **Farel Rakha Dzakwan** (AI Engineer & AI Researcher). Built with high visual aesthetic standards (Cyber-Minimalism Dark Mode, Glassmorphism, Monospace Typography, and Interactive Micro-interactions).
+Personal portfolio website for **Farel Rakha Dzakwan** (AI Engineer & AI Researcher). Built with high aesthetic standards, clean modern typography, responsive design, and performance optimizations.
+
+Live at: [farelrakhadzakwan.my.id](https://farelrakhadzakwan.my.id)
 
 ---
 
-## 🚀 Technical Architecture (Refactored)
+## ⚡ Key Highlights & Architecture (Patch v2.1.0)
 
-This project has been massively refactored from static HTML/Vanilla JS into a modular **React application** powered by **Vite** and **Tailwind CSS**.
+### 🎨 Human-Crafted Visual Excellence
+- **Dual Theme (Dark & Light Mode)**: Fully bespoke color system (Midnight Navy & Slate for Dark Mode, Crisp Porcelain & Slate for Light Mode) designed to eliminate generic AI-generated template clichés.
+- **Circular Reveal Theme Animation**: Uses the cutting-edge **View Transitions API** to create a circular radial wipe radiating directly from the theme toggle button.
+- **Comprehensive AI Focus**: Highlights core AI engineering and research disciplines including **Machine Learning**, **Deep Learning**, **Computer Vision**, **NLP**, **LLM**, **RAG**, **Generative AI**, and **EEG Signal Processing**.
+- **Interactive Methodology Pipeline**: 10-stage sequential research pipeline with real-time stage inspection and research evidence telemetry.
+- **Dynamic Projects Showcase**: Category filtering (*All*, *Research & Thesis*, *Computer Vision*, *NLP & LLM*, *IoT & Systems*) with dedicated thesis spotlight and empirical metric tags (e.g., *87.5% Accuracy*, *p < 0.05*).
+- **Verified Credentials & HAKI IP**: Showcases 1st Place IEEE FEST 2025, Kemenkumham HAKI Registered Intellectual Property, Alibaba Cloud Top 10, and verified certificates from Google, OpenAI, DeepLearning.AI, and Dicoding.
+- **Seamless Micro-Interactions**: 1-click clipboard email copy with animated confirmation (`✓ Email Copied!`), collapsible career accordions, and static timeline status (`Timeline: GMT+7 (WIB)`).
 
-### Single Source of Truth (SSOT)
-The portfolio uses a robust YAML configuration (`docs/MasterContentSpesification.yaml`) as the definitive Single Source of Truth. 
-React components (e.g. `Hero.jsx`, `Projects.jsx`) dynamically read from this YAML file to render the content, meaning all data updates (projects, work experience, achievements) only need to be done in one central file.
-
-### 🎨 Visual & Technical Highlights
-
-- **Component-based React UI**: Codebase is split into manageable components inside `src/components/`.
-- **Cyber-Minimalist Aesthetics**: Deep dark background (`#0a0a0f`) paired with glowing accent colors (`#4f7cff`, `#7c5cff`, `#00ff88`, `#38bdf8`) and smooth radial glows.
-- **Glassmorphism Navigation**: Floating navigation bar featuring backdrop-filter blur (`20px`) and color saturation effect.
-- **Advanced Typography**: Modern Sans-Serif (**Inter** & **Space Grotesk**) paired with Monospace (**JetBrains Mono**) for tags, dates, metrics, and terminal status indicators.
-- **Interactive Micro-Interactions** (Integrated via React Hooks & Vanilla JS hybrids):
-  - **3D Card Tilt Effect**: Dynamic perspective rotate on cursor hover for project, skill, and achievement cards.
-  - **Cursor-Tracking Radial Glow**: Mouse-following radial glow highlights on project cards.
-  - **Text Scramble Matrix Effect**: Scrambles section headers and project tags into random cyber characters on hover.
-  - **Animated Metric Counters**: Smooth count-up animation for key performance indicators (GPA, project counts, awards).
-  - **Live WIB Clock & Model Status**: Diagnostic footer showing real-time WIB timezone clock and glowing inference readiness status.
-- **Responsive Timeline Architecture**: Experiences and Organizational Activity use a modern horizontal timeline on desktop to maximize screen space, and gracefully degrade to a vertical timeline on mobile devices.
+### 🚀 Performance & Lightweight Engineering
+- **Zero Runtime Parsing Overhead**: Data is pre-bundled as optimized static JSON (`src/data/portfolioData.json`), completely eliminating client-side `js-yaml` runtime parsing lags.
+- **100% Declarative React State**: All 11 legacy imperative DOM scripts have been replaced with clean, modular React components.
+- **Single Lightweight IntersectionObserver**: Smooth 60 FPS viewport reveal animations without heavy third-party animation libraries or scroll-listener thrashing.
+- **Optimized Bundle Size**: Production JavaScript bundle reduced to **~325 kB** (~95.8 kB gzip), compiling in **~1.1 seconds** via Vite.
 
 ---
 
@@ -32,19 +29,35 @@ React components (e.g. `Hero.jsx`, `Projects.jsx`) dynamically read from this YA
 
 ```text
 WebPortfolio/
-├── docs/
-│   └── MasterContentSpesification.yaml # Single Source of Truth for Content
-├── public/
-│   └── assets/                  # Logos, icons, and image assets
-├── src/
-│   ├── components/              # Modular React Components (Hero, About, Projects, etc.)
-│   ├── App.jsx                  # Main React App integrating YAML parsing
-│   ├── main.jsx                 # React Entry Point
-│   └── style.css                # Custom CSS Design System & Tailwind Directives
-├── index.html                   # HTML Shell for Vite
+├── CHANGELOG.md                 # Detailed patch notes and version history
+├── README.md                    # Project documentation
+├── index.html                   # HTML Shell for Vite with initial theme script
+├── package.json                 # Dependencies and scripts
 ├── vite.config.js               # Vite Configuration
-├── package.json                 # Dependencies (React, js-yaml, Tailwind, Vite)
-└── README.md                    # Project documentation
+├── docs/
+│   ├── MasterContentSpesification.yaml # Comprehensive content master specification
+│   └── raw_assets/             # Reference materials and raw media
+├── public/
+│   └── assets/                  # High-res portraits, icons, and badges
+└── src/
+    ├── App.jsx                  # Root React component & IntersectionObserver
+    ├── main.jsx                 # React entry point
+    ├── style.css                # Curated design tokens, theme variables & animations
+    ├── data/
+    │   └── portfolioData.json   # Pre-bundled static portfolio dataset
+    └── components/              # Modular, reactive UI components
+        ├── Navbar.jsx           # Responsive navigation & View Transition theme toggle
+        ├── Hero.jsx             # Hero section with formal portrait & AI focus chips
+        ├── Metrics.jsx          # Performance KPI cards (GPA, Projects, Certs, HAKI)
+        ├── About.jsx            # Editorial research background & milestone highlights
+        ├── Methodology.jsx      # Interactive 10-stage research pipeline
+        ├── Projects.jsx         # Filterable project showcase & thesis spotlight
+        ├── Experience.jsx       # Career timeline with collapsible accordions
+        ├── Organization.jsx     # Leadership & community governance cards
+        ├── Skills.jsx           # Categorized technical competencies
+        ├── Achievements.jsx     # Honors, certifications & registered IP
+        ├── Contact.jsx          # Contact actions with 1-click email copy
+        └── Footer.jsx           # Regional timeline (GMT+7) & footer navigation
 ```
 
 ---
@@ -62,28 +75,34 @@ WebPortfolio/
    npm install
    ```
 
-3. **Run local development server:**
+3. **Start local development server:**
    ```bash
    npm run dev
    ```
-   Then visit `http://localhost:5173`.
+   Open `http://localhost:5173` in your browser.
 
 4. **Build for production:**
    ```bash
    npm run build
    ```
 
----
-
-## 🛠️ Built With
-
-- **React 18** — UI Component Library
-- **Vite** — Next Generation Frontend Tooling
-- **Tailwind CSS v4** — Utility-first CSS framework
-- **js-yaml** — YAML parser for SSOT implementation
-- **HTML5 & CSS3** — Semantic structure and animations
-- **Google Fonts** — Inter, Space Grotesk, JetBrains Mono
+5. **Preview production build locally:**
+   ```bash
+   npm run preview
+   ```
 
 ---
 
-© 2026 Farel Rakha Dzakwan. Built with precision and AI research rigor.
+## 🛠️ Tech Stack
+
+- **Framework**: [React 19](https://react.dev/)
+- **Bundler & Dev Server**: [Vite 8](https://vitejs.dev/)
+- **Styling**: Vanilla CSS Design System with Tailwind CSS v4 utilities
+- **Typography**: [Inter](https://fonts.google.com/specimen/Inter), [Outfit](https://fonts.google.com/specimen/Outfit), [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono)
+- **Animation & Transitions**: CSS Transitions, Keyframe Animations, View Transitions API, Intersection Observer
+
+---
+
+## 📄 License & Attribution
+
+© 2026 Farel Rakha Dzakwan. Designed and developed for AI Engineering & Research Excellence.
